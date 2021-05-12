@@ -8,21 +8,23 @@ namespace FastFoodDemo
     {
         public int ID { get; set; }
         public bool Edit { get; set; }
+
         public Orders()
         {
             InitializeComponent();
         }
-       
-        private void EditButton_Click(object sender, EventArgs e)
+
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
-            OrderAdd EdOrders = new OrderAdd
+            OrderAdd orderAdd = new OrderAdd
             {
                 ID = ID,
                 Edit = true
             };
-            EdOrders.Show();
+            orderAdd.Show();
         }
-        private void DelButton_Click(object sender, EventArgs e)
+
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Вы действительно хотите удалить запись?", "Подтверждение удаления",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -35,10 +37,9 @@ namespace FastFoodDemo
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-                FormMain.SR.RefreshOrder();
+                FormMain.FM.RefreshOrder();
                 MessageBox.Show("Запись успешно удалена!", "Запись удалена", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
     }
 }

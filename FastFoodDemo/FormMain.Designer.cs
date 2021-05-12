@@ -26,500 +26,82 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        [System.Obsolete]
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.datePickerGraphic = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.DeliveryShowButton = new System.Windows.Forms.Button();
+            this.StaffShowButton = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.buttonHelp = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.ClientsShowButton = new System.Windows.Forms.Button();
+            this.OrdersShowButton = new System.Windows.Forms.Button();
+            this.ButtonHelp = new System.Windows.Forms.Button();
+            this.DishShowButton = new System.Windows.Forms.Button();
+            this.DragPanel = new System.Windows.Forms.Panel();
+            this.SearchField = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.ExitButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.SearchButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelDatePicker = new System.Windows.Forms.Panel();
+            this.SubHeaderLabel = new System.Windows.Forms.Label();
+            this.HeaderLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.Clients = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Sotrud = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ClientsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Staff = new System.Windows.Forms.TabPage();
+            this.StaffPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Dish = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DishesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Orders = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OrdersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Delivery = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DeliveryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuImageButton7 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton6 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton5 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.datePickerGraphic = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddDeliveryButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.AddClientButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.AddDishButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.AddStaffButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.DatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.DatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.BeginLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.EndLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ChoiceLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.SearchDateButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.DragPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panelDatePicker.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pages.SuspendLayout();
             this.Clients.SuspendLayout();
-            this.Sotrud.SuspendLayout();
+            this.Staff.SuspendLayout();
             this.Dish.SuspendLayout();
             this.Orders.SuspendLayout();
             this.Delivery.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.datePickerGraphic);
+            this.panel1.Controls.Add(this.DeliveryShowButton);
+            this.panel1.Controls.Add(this.StaffShowButton);
             this.panel1.Controls.Add(this.SidePanel);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.buttonHelp);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ClientsShowButton);
+            this.panel1.Controls.Add(this.OrdersShowButton);
+            this.panel1.Controls.Add(this.ButtonHelp);
+            this.panel1.Controls.Add(this.DishShowButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 599);
             this.panel1.TabIndex = 0;
-            // 
-            // SidePanel
-            // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(3, 112);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(10, 54);
-            this.SidePanel.TabIndex = 4;
-            // 
-            // buttonHelp
-            // 
-            this.buttonHelp.FlatAppearance.BorderSize = 0;
-            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHelp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHelp.ForeColor = System.Drawing.Color.White;
-            this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHelp.Location = new System.Drawing.Point(0, 565);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(36, 34);
-            this.buttonHelp.TabIndex = 4;
-            this.buttonHelp.Text = "?";
-            this.buttonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.Button14_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel2.Controls.Add(this.bunifuImageButton1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 48);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(243, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(111, 143);
-            this.panel3.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Кафе";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "BestCoffe";
-            // 
-            // panelDatePicker
-            // 
-            this.panelDatePicker.Controls.Add(this.datePickerGraphic);
-            this.panelDatePicker.Location = new System.Drawing.Point(485, 51);
-            this.panelDatePicker.Name = "panelDatePicker";
-            this.panelDatePicker.Size = new System.Drawing.Size(264, 51);
-            this.panelDatePicker.TabIndex = 7;
-            this.panelDatePicker.Tag = "0";
-            // 
-            // Pages
-            // 
-            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Pages.AllowTransitions = false;
-            this.Pages.Controls.Add(this.Clients);
-            this.Pages.Controls.Add(this.Sotrud);
-            this.Pages.Controls.Add(this.Dish);
-            this.Pages.Controls.Add(this.Orders);
-            this.Pages.Controls.Add(this.Delivery);
-            this.Pages.Location = new System.Drawing.Point(204, 149);
-            this.Pages.Multiline = true;
-            this.Pages.Name = "Pages";
-            this.Pages.Page = this.Delivery;
-            this.Pages.PageIndex = 4;
-            this.Pages.PageName = "Delivery";
-            this.Pages.PageTitle = "Доставка";
-            this.Pages.SelectedIndex = 0;
-            this.Pages.Size = new System.Drawing.Size(753, 450);
-            this.Pages.TabIndex = 8;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Pages.Transition = animation2;
-            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
-            // 
-            // Clients
-            // 
-            this.Clients.Controls.Add(this.flowLayoutPanel1);
-            this.Clients.Location = new System.Drawing.Point(4, 4);
-            this.Clients.Name = "Clients";
-            this.Clients.Padding = new System.Windows.Forms.Padding(3);
-            this.Clients.Size = new System.Drawing.Size(745, 424);
-            this.Clients.TabIndex = 1;
-            this.Clients.Text = "Клиенты";
-            this.Clients.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(739, 418);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // Sotrud
-            // 
-            this.Sotrud.Controls.Add(this.flowLayoutPanel2);
-            this.Sotrud.Location = new System.Drawing.Point(4, 4);
-            this.Sotrud.Name = "Sotrud";
-            this.Sotrud.Size = new System.Drawing.Size(745, 424);
-            this.Sotrud.TabIndex = 2;
-            this.Sotrud.Text = "Сотрудники";
-            this.Sotrud.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(745, 424);
-            this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // Dish
-            // 
-            this.Dish.Controls.Add(this.flowLayoutPanel3);
-            this.Dish.Location = new System.Drawing.Point(4, 4);
-            this.Dish.Name = "Dish";
-            this.Dish.Padding = new System.Windows.Forms.Padding(3);
-            this.Dish.Size = new System.Drawing.Size(745, 424);
-            this.Dish.TabIndex = 0;
-            this.Dish.Text = "Еда";
-            this.Dish.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(739, 418);
-            this.flowLayoutPanel3.TabIndex = 2;
-            // 
-            // Orders
-            // 
-            this.Orders.Controls.Add(this.flowLayoutPanel4);
-            this.Orders.Location = new System.Drawing.Point(4, 4);
-            this.Orders.Name = "Orders";
-            this.Orders.Size = new System.Drawing.Size(745, 424);
-            this.Orders.TabIndex = 3;
-            this.Orders.Text = "Заказы";
-            this.Orders.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(745, 424);
-            this.flowLayoutPanel4.TabIndex = 3;
-            // 
-            // Delivery
-            // 
-            this.Delivery.Controls.Add(this.flowLayoutPanel5);
-            this.Delivery.Location = new System.Drawing.Point(4, 4);
-            this.Delivery.Name = "Delivery";
-            this.Delivery.Size = new System.Drawing.Size(745, 424);
-            this.Delivery.TabIndex = 4;
-            this.Delivery.Text = "Доставка";
-            this.Delivery.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.AutoScroll = true;
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(745, 424);
-            this.flowLayoutPanel5.TabIndex = 4;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel2;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuImageButton7
-            // 
-            this.bunifuImageButton7.ActiveImage = null;
-            this.bunifuImageButton7.AllowAnimations = true;
-            this.bunifuImageButton7.AllowBuffering = false;
-            this.bunifuImageButton7.AllowToggling = false;
-            this.bunifuImageButton7.AllowZooming = true;
-            this.bunifuImageButton7.AllowZoomingOnFocus = false;
-            this.bunifuImageButton7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton7.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.ErrorImage")));
-            this.bunifuImageButton7.FadeWhenInactive = false;
-            this.bunifuImageButton7.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton7.Image = global::FastFoodDemo.Properties.Resources.delivery_96px;
-            this.bunifuImageButton7.ImageActive = null;
-            this.bunifuImageButton7.ImageLocation = null;
-            this.bunifuImageButton7.ImageMargin = 5;
-            this.bunifuImageButton7.ImageSize = new System.Drawing.Size(43, 43);
-            this.bunifuImageButton7.ImageZoomSize = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton7.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.InitialImage")));
-            this.bunifuImageButton7.Location = new System.Drawing.Point(431, 101);
-            this.bunifuImageButton7.Name = "bunifuImageButton7";
-            this.bunifuImageButton7.Rotation = 0;
-            this.bunifuImageButton7.ShowActiveImage = true;
-            this.bunifuImageButton7.ShowCursorChanges = true;
-            this.bunifuImageButton7.ShowImageBorders = true;
-            this.bunifuImageButton7.ShowSizeMarkers = false;
-            this.bunifuImageButton7.Size = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton7.TabIndex = 16;
-            this.bunifuImageButton7.ToolTipText = "Оформление доставки";
-            this.bunifuImageButton7.WaitOnLoad = false;
-            this.bunifuImageButton7.Zoom = 5;
-            this.bunifuImageButton7.ZoomSpeed = 10;
-            this.bunifuImageButton7.Click += new System.EventHandler(this.BunifuImageButton7_Click);
-            // 
-            // bunifuImageButton6
-            // 
-            this.bunifuImageButton6.ActiveImage = null;
-            this.bunifuImageButton6.AllowAnimations = true;
-            this.bunifuImageButton6.AllowBuffering = false;
-            this.bunifuImageButton6.AllowToggling = false;
-            this.bunifuImageButton6.AllowZooming = true;
-            this.bunifuImageButton6.AllowZoomingOnFocus = false;
-            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton6.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.ErrorImage")));
-            this.bunifuImageButton6.FadeWhenInactive = false;
-            this.bunifuImageButton6.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton6.Image = global::FastFoodDemo.Properties.Resources.customer_96px;
-            this.bunifuImageButton6.ImageActive = null;
-            this.bunifuImageButton6.ImageLocation = null;
-            this.bunifuImageButton6.ImageMargin = 5;
-            this.bunifuImageButton6.ImageSize = new System.Drawing.Size(43, 43);
-            this.bunifuImageButton6.ImageZoomSize = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton6.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.InitialImage")));
-            this.bunifuImageButton6.Location = new System.Drawing.Point(431, 55);
-            this.bunifuImageButton6.Name = "bunifuImageButton6";
-            this.bunifuImageButton6.Rotation = 0;
-            this.bunifuImageButton6.ShowActiveImage = true;
-            this.bunifuImageButton6.ShowCursorChanges = true;
-            this.bunifuImageButton6.ShowImageBorders = true;
-            this.bunifuImageButton6.ShowSizeMarkers = false;
-            this.bunifuImageButton6.Size = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton6.TabIndex = 15;
-            this.bunifuImageButton6.ToolTipText = "Добавление нового клиента";
-            this.bunifuImageButton6.WaitOnLoad = false;
-            this.bunifuImageButton6.Zoom = 5;
-            this.bunifuImageButton6.ZoomSpeed = 10;
-            this.bunifuImageButton6.Click += new System.EventHandler(this.BunifuImageButton6_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.ActiveImage = null;
-            this.bunifuImageButton2.AllowAnimations = true;
-            this.bunifuImageButton2.AllowBuffering = false;
-            this.bunifuImageButton2.AllowToggling = false;
-            this.bunifuImageButton2.AllowZooming = true;
-            this.bunifuImageButton2.AllowZoomingOnFocus = false;
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
-            this.bunifuImageButton2.FadeWhenInactive = false;
-            this.bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton2.Image = global::FastFoodDemo.Properties.Resources.icons8_instagram_64;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.ImageLocation = null;
-            this.bunifuImageButton2.ImageMargin = 5;
-            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(206, 50);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Rotation = 0;
-            this.bunifuImageButton2.ShowActiveImage = true;
-            this.bunifuImageButton2.ShowCursorChanges = true;
-            this.bunifuImageButton2.ShowImageBorders = true;
-            this.bunifuImageButton2.ShowSizeMarkers = false;
-            this.bunifuImageButton2.Size = new System.Drawing.Size(35, 35);
-            this.bunifuImageButton2.TabIndex = 11;
-            this.bunifuImageButton2.ToolTipText = "Аккаунт в Instagram";
-            this.bunifuImageButton2.WaitOnLoad = false;
-            this.bunifuImageButton2.Zoom = 5;
-            this.bunifuImageButton2.ZoomSpeed = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.BunifuImageButton2_Click);
-            // 
-            // bunifuImageButton5
-            // 
-            this.bunifuImageButton5.ActiveImage = null;
-            this.bunifuImageButton5.AllowAnimations = true;
-            this.bunifuImageButton5.AllowBuffering = false;
-            this.bunifuImageButton5.AllowToggling = false;
-            this.bunifuImageButton5.AllowZooming = true;
-            this.bunifuImageButton5.AllowZoomingOnFocus = false;
-            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.ErrorImage")));
-            this.bunifuImageButton5.FadeWhenInactive = false;
-            this.bunifuImageButton5.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton5.Image = global::FastFoodDemo.Properties.Resources.icons8_настоящая_еда_для_еды_96;
-            this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.ImageLocation = null;
-            this.bunifuImageButton5.ImageMargin = 5;
-            this.bunifuImageButton5.ImageSize = new System.Drawing.Size(43, 43);
-            this.bunifuImageButton5.ImageZoomSize = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton5.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.InitialImage")));
-            this.bunifuImageButton5.Location = new System.Drawing.Point(356, 101);
-            this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Rotation = 0;
-            this.bunifuImageButton5.ShowActiveImage = true;
-            this.bunifuImageButton5.ShowCursorChanges = true;
-            this.bunifuImageButton5.ShowImageBorders = true;
-            this.bunifuImageButton5.ShowSizeMarkers = false;
-            this.bunifuImageButton5.Size = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton5.TabIndex = 14;
-            this.bunifuImageButton5.ToolTipText = "Добавление нового блюда";
-            this.bunifuImageButton5.WaitOnLoad = false;
-            this.bunifuImageButton5.Zoom = 5;
-            this.bunifuImageButton5.ZoomSpeed = 10;
-            this.bunifuImageButton5.Click += new System.EventHandler(this.BunifuImageButton5_Click);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.ActiveImage = null;
-            this.bunifuImageButton4.AllowAnimations = true;
-            this.bunifuImageButton4.AllowBuffering = false;
-            this.bunifuImageButton4.AllowToggling = false;
-            this.bunifuImageButton4.AllowZooming = true;
-            this.bunifuImageButton4.AllowZoomingOnFocus = false;
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.ErrorImage")));
-            this.bunifuImageButton4.FadeWhenInactive = false;
-            this.bunifuImageButton4.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton4.Image = global::FastFoodDemo.Properties.Resources.icons8_идентифицированный_пользователь_мужчина_96;
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.ImageLocation = null;
-            this.bunifuImageButton4.ImageMargin = 5;
-            this.bunifuImageButton4.ImageSize = new System.Drawing.Size(43, 43);
-            this.bunifuImageButton4.ImageZoomSize = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton4.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.InitialImage")));
-            this.bunifuImageButton4.Location = new System.Drawing.Point(356, 53);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Rotation = 0;
-            this.bunifuImageButton4.ShowActiveImage = true;
-            this.bunifuImageButton4.ShowCursorChanges = true;
-            this.bunifuImageButton4.ShowImageBorders = true;
-            this.bunifuImageButton4.ShowSizeMarkers = false;
-            this.bunifuImageButton4.Size = new System.Drawing.Size(48, 48);
-            this.bunifuImageButton4.TabIndex = 13;
-            this.bunifuImageButton4.ToolTipText = "Добавление нового сотрудника";
-            this.bunifuImageButton4.WaitOnLoad = false;
-            this.bunifuImageButton4.Zoom = 5;
-            this.bunifuImageButton4.ZoomSpeed = 10;
-            this.bunifuImageButton4.Click += new System.EventHandler(this.BunifuImageButton4_Click);
-            // 
-            // bunifuImageButton3
-            // 
-            this.bunifuImageButton3.ActiveImage = null;
-            this.bunifuImageButton3.AllowAnimations = true;
-            this.bunifuImageButton3.AllowBuffering = false;
-            this.bunifuImageButton3.AllowToggling = false;
-            this.bunifuImageButton3.AllowZooming = true;
-            this.bunifuImageButton3.AllowZoomingOnFocus = false;
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.ErrorImage")));
-            this.bunifuImageButton3.FadeWhenInactive = false;
-            this.bunifuImageButton3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton3.Image = global::FastFoodDemo.Properties.Resources.icons8_вконтакте_48;
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.ImageLocation = null;
-            this.bunifuImageButton3.ImageMargin = 5;
-            this.bunifuImageButton3.ImageSize = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton3.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.bunifuImageButton3.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.InitialImage")));
-            this.bunifuImageButton3.Location = new System.Drawing.Point(206, 104);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Rotation = 0;
-            this.bunifuImageButton3.ShowActiveImage = true;
-            this.bunifuImageButton3.ShowCursorChanges = true;
-            this.bunifuImageButton3.ShowImageBorders = true;
-            this.bunifuImageButton3.ShowSizeMarkers = false;
-            this.bunifuImageButton3.Size = new System.Drawing.Size(35, 35);
-            this.bunifuImageButton3.TabIndex = 12;
-            this.bunifuImageButton3.ToolTipText = "Страничка в ВК";
-            this.bunifuImageButton3.WaitOnLoad = false;
-            this.bunifuImageButton3.Zoom = 5;
-            this.bunifuImageButton3.ZoomSpeed = 10;
-            this.bunifuImageButton3.Click += new System.EventHandler(this.BunifuImageButton3_Click);
             // 
             // datePickerGraphic
             // 
@@ -536,18 +118,319 @@
             this.datePickerGraphic.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.datePickerGraphic.FillDatePicker = false;
             this.datePickerGraphic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.datePickerGraphic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.datePickerGraphic.ForeColor = System.Drawing.Color.White;
             this.datePickerGraphic.Icon = ((System.Drawing.Image)(resources.GetObject("datePickerGraphic.Icon")));
-            this.datePickerGraphic.IconColor = System.Drawing.Color.Snow;
+            this.datePickerGraphic.IconColor = System.Drawing.Color.Transparent;
             this.datePickerGraphic.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
             this.datePickerGraphic.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.datePickerGraphic.LeftTextMargin = 50;
-            this.datePickerGraphic.Location = new System.Drawing.Point(3, 11);
-            this.datePickerGraphic.MinimumSize = new System.Drawing.Size(256, 32);
+            this.datePickerGraphic.Location = new System.Drawing.Point(1, 53);
+            this.datePickerGraphic.MinimumSize = new System.Drawing.Size(200, 32);
             this.datePickerGraphic.Name = "datePickerGraphic";
-            this.datePickerGraphic.Size = new System.Drawing.Size(256, 32);
+            this.datePickerGraphic.Size = new System.Drawing.Size(200, 32);
             this.datePickerGraphic.TabIndex = 6;
+            this.datePickerGraphic.TabStop = false;
             this.datePickerGraphic.Value = new System.DateTime(2021, 4, 17, 4, 40, 0, 0);
+            // 
+            // DeliveryShowButton
+            // 
+            this.DeliveryShowButton.FlatAppearance.BorderSize = 0;
+            this.DeliveryShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeliveryShowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryShowButton.ForeColor = System.Drawing.Color.White;
+            this.DeliveryShowButton.Image = global::FastFoodDemo.Properties.Resources.delivery_25px2;
+            this.DeliveryShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeliveryShowButton.Location = new System.Drawing.Point(12, 352);
+            this.DeliveryShowButton.Name = "DeliveryShowButton";
+            this.DeliveryShowButton.Size = new System.Drawing.Size(197, 54);
+            this.DeliveryShowButton.TabIndex = 94;
+            this.DeliveryShowButton.Text = "       Доставка";
+            this.DeliveryShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DeliveryShowButton.UseCompatibleTextRendering = true;
+            this.DeliveryShowButton.UseVisualStyleBackColor = true;
+            this.DeliveryShowButton.Click += new System.EventHandler(this.DeliveryShowButton_Click);
+            // 
+            // StaffShowButton
+            // 
+            this.StaffShowButton.FlatAppearance.BorderSize = 0;
+            this.StaffShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffShowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffShowButton.ForeColor = System.Drawing.Color.White;
+            this.StaffShowButton.Image = global::FastFoodDemo.Properties.Resources.name_tag_25px;
+            this.StaffShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StaffShowButton.Location = new System.Drawing.Point(12, 292);
+            this.StaffShowButton.Name = "StaffShowButton";
+            this.StaffShowButton.Size = new System.Drawing.Size(197, 54);
+            this.StaffShowButton.TabIndex = 93;
+            this.StaffShowButton.Text = "       Сотрудники";
+            this.StaffShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.StaffShowButton.UseCompatibleTextRendering = true;
+            this.StaffShowButton.UseVisualStyleBackColor = true;
+            this.StaffShowButton.Click += new System.EventHandler(this.StaffShowButton_Click);
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.SidePanel.Location = new System.Drawing.Point(3, 112);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(10, 54);
+            this.SidePanel.TabIndex = 4;
+            // 
+            // ClientsShowButton
+            // 
+            this.ClientsShowButton.FlatAppearance.BorderSize = 0;
+            this.ClientsShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClientsShowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientsShowButton.ForeColor = System.Drawing.Color.White;
+            this.ClientsShowButton.Image = ((System.Drawing.Image)(resources.GetObject("ClientsShowButton.Image")));
+            this.ClientsShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClientsShowButton.Location = new System.Drawing.Point(12, 232);
+            this.ClientsShowButton.Name = "ClientsShowButton";
+            this.ClientsShowButton.Size = new System.Drawing.Size(197, 54);
+            this.ClientsShowButton.TabIndex = 92;
+            this.ClientsShowButton.Text = "       Клиенты";
+            this.ClientsShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ClientsShowButton.UseVisualStyleBackColor = true;
+            this.ClientsShowButton.Click += new System.EventHandler(this.ClientsShowButton_Click);
+            // 
+            // OrdersShowButton
+            // 
+            this.OrdersShowButton.FlatAppearance.BorderSize = 0;
+            this.OrdersShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OrdersShowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdersShowButton.ForeColor = System.Drawing.Color.White;
+            this.OrdersShowButton.Image = global::FastFoodDemo.Properties.Resources.order_25px;
+            this.OrdersShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OrdersShowButton.Location = new System.Drawing.Point(12, 172);
+            this.OrdersShowButton.Name = "OrdersShowButton";
+            this.OrdersShowButton.Size = new System.Drawing.Size(197, 54);
+            this.OrdersShowButton.TabIndex = 91;
+            this.OrdersShowButton.Text = "       Заказы";
+            this.OrdersShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.OrdersShowButton.UseVisualStyleBackColor = true;
+            this.OrdersShowButton.Click += new System.EventHandler(this.OrdersShowButton_Click);
+            // 
+            // ButtonHelp
+            // 
+            this.ButtonHelp.FlatAppearance.BorderSize = 0;
+            this.ButtonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHelp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHelp.ForeColor = System.Drawing.Color.White;
+            this.ButtonHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonHelp.Location = new System.Drawing.Point(0, 565);
+            this.ButtonHelp.Name = "ButtonHelp";
+            this.ButtonHelp.Size = new System.Drawing.Size(36, 34);
+            this.ButtonHelp.TabIndex = 4;
+            this.ButtonHelp.Text = "?";
+            this.ButtonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonHelp.UseVisualStyleBackColor = true;
+            this.ButtonHelp.Click += new System.EventHandler(this.ButtonHelp_Click);
+            // 
+            // DishShowButton
+            // 
+            this.DishShowButton.FlatAppearance.BorderSize = 0;
+            this.DishShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DishShowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DishShowButton.ForeColor = System.Drawing.Color.White;
+            this.DishShowButton.Image = ((System.Drawing.Image)(resources.GetObject("DishShowButton.Image")));
+            this.DishShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DishShowButton.Location = new System.Drawing.Point(12, 112);
+            this.DishShowButton.Name = "DishShowButton";
+            this.DishShowButton.Size = new System.Drawing.Size(197, 54);
+            this.DishShowButton.TabIndex = 90;
+            this.DishShowButton.Text = "       Что покушать?";
+            this.DishShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DishShowButton.UseVisualStyleBackColor = true;
+            this.DishShowButton.Click += new System.EventHandler(this.DishShowButton_Click);
+            // 
+            // DragPanel
+            // 
+            this.DragPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.DragPanel.Controls.Add(this.SearchField);
+            this.DragPanel.Controls.Add(this.ExitButton);
+            this.DragPanel.Controls.Add(this.SearchButton);
+            this.DragPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DragPanel.Location = new System.Drawing.Point(204, 0);
+            this.DragPanel.Name = "DragPanel";
+            this.DragPanel.Size = new System.Drawing.Size(753, 48);
+            this.DragPanel.TabIndex = 1;
+            // 
+            // SearchField
+            // 
+            this.SearchField.AcceptsReturn = false;
+            this.SearchField.AcceptsTab = false;
+            this.SearchField.AnimationSpeed = 200;
+            this.SearchField.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.SearchField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.SearchField.BackColor = System.Drawing.Color.White;
+            this.SearchField.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchField.BackgroundImage")));
+            this.SearchField.BorderColorActive = System.Drawing.Color.Maroon;
+            this.SearchField.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.SearchField.BorderColorHover = System.Drawing.Color.IndianRed;
+            this.SearchField.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.SearchField.BorderRadius = 1;
+            this.SearchField.BorderThickness = 0;
+            this.SearchField.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.SearchField.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchField.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchField.DefaultText = "";
+            this.SearchField.FillColor = System.Drawing.Color.White;
+            this.SearchField.HideSelection = true;
+            this.SearchField.IconLeft = null;
+            this.SearchField.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchField.IconPadding = 10;
+            this.SearchField.IconRight = null;
+            this.SearchField.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchField.Lines = new string[0];
+            this.SearchField.Location = new System.Drawing.Point(317, 6);
+            this.SearchField.MaxLength = 32767;
+            this.SearchField.MinimumSize = new System.Drawing.Size(1, 1);
+            this.SearchField.Modified = false;
+            this.SearchField.Multiline = false;
+            this.SearchField.Name = "SearchField";
+            stateProperties33.BorderColor = System.Drawing.Color.Maroon;
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.SearchField.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.IndianRed;
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.ForeColor = System.Drawing.Color.Empty;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnIdleState = stateProperties36;
+            this.SearchField.Padding = new System.Windows.Forms.Padding(3);
+            this.SearchField.PasswordChar = '\0';
+            this.SearchField.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.SearchField.PlaceholderText = "Поле поиска";
+            this.SearchField.ReadOnly = false;
+            this.SearchField.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SearchField.SelectedText = "";
+            this.SearchField.SelectionLength = 0;
+            this.SearchField.SelectionStart = 0;
+            this.SearchField.ShortcutsEnabled = true;
+            this.SearchField.Size = new System.Drawing.Size(178, 36);
+            this.SearchField.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.SearchField.TabIndex = 100;
+            this.SearchField.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SearchField.TextMarginBottom = 0;
+            this.SearchField.TextMarginLeft = 0;
+            this.SearchField.TextMarginTop = 0;
+            this.SearchField.TextPlaceholder = "Поле поиска";
+            this.SearchField.UseSystemPasswordChar = false;
+            this.SearchField.WordWrap = true;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.ActiveImage = global::FastFoodDemo.Properties.Resources.icons8_удалить_25;
+            this.ExitButton.AllowAnimations = true;
+            this.ExitButton.AllowBuffering = false;
+            this.ExitButton.AllowToggling = false;
+            this.ExitButton.AllowZooming = true;
+            this.ExitButton.AllowZoomingOnFocus = false;
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ExitButton.ErrorImage = null;
+            this.ExitButton.FadeWhenInactive = false;
+            this.ExitButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ExitButton.Image = global::FastFoodDemo.Properties.Resources.icons8_удалить_25;
+            this.ExitButton.ImageActive = global::FastFoodDemo.Properties.Resources.icons8_удалить_25;
+            this.ExitButton.ImageLocation = null;
+            this.ExitButton.ImageMargin = 10;
+            this.ExitButton.ImageSize = new System.Drawing.Size(30, 30);
+            this.ExitButton.ImageZoomSize = new System.Drawing.Size(40, 40);
+            this.ExitButton.InitialImage = null;
+            this.ExitButton.Location = new System.Drawing.Point(709, 3);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Rotation = 0;
+            this.ExitButton.ShowActiveImage = true;
+            this.ExitButton.ShowCursorChanges = true;
+            this.ExitButton.ShowImageBorders = true;
+            this.ExitButton.ShowSizeMarkers = false;
+            this.ExitButton.Size = new System.Drawing.Size(40, 40);
+            this.ExitButton.TabIndex = 0;
+            this.ExitButton.ToolTipText = "";
+            this.ExitButton.WaitOnLoad = false;
+            this.ExitButton.Zoom = 10;
+            this.ExitButton.ZoomSpeed = 10;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.ActiveImage = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchButton.AllowAnimations = true;
+            this.SearchButton.AllowBuffering = false;
+            this.SearchButton.AllowToggling = false;
+            this.SearchButton.AllowZooming = true;
+            this.SearchButton.AllowZoomingOnFocus = false;
+            this.SearchButton.BackColor = System.Drawing.Color.Transparent;
+            this.SearchButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SearchButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SearchButton.ErrorImage")));
+            this.SearchButton.FadeWhenInactive = false;
+            this.SearchButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.SearchButton.Image = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchButton.ImageActive = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchButton.ImageLocation = null;
+            this.SearchButton.ImageMargin = 5;
+            this.SearchButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SearchButton.ImageZoomSize = new System.Drawing.Size(37, 37);
+            this.SearchButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("SearchButton.InitialImage")));
+            this.SearchButton.Location = new System.Drawing.Point(505, 6);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Rotation = 0;
+            this.SearchButton.ShowActiveImage = true;
+            this.SearchButton.ShowCursorChanges = true;
+            this.SearchButton.ShowImageBorders = true;
+            this.SearchButton.ShowSizeMarkers = false;
+            this.SearchButton.Size = new System.Drawing.Size(37, 37);
+            this.SearchButton.TabIndex = 101;
+            this.SearchButton.ToolTipText = "Добавление нового блюда";
+            this.SearchButton.WaitOnLoad = false;
+            this.SearchButton.Zoom = 5;
+            this.SearchButton.ZoomSpeed = 10;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel3.Controls.Add(this.SubHeaderLabel);
+            this.panel3.Controls.Add(this.HeaderLabel);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(243, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(111, 143);
+            this.panel3.TabIndex = 2;
+            // 
+            // SubHeaderLabel
+            // 
+            this.SubHeaderLabel.AutoSize = true;
+            this.SubHeaderLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubHeaderLabel.ForeColor = System.Drawing.Color.White;
+            this.SubHeaderLabel.Location = new System.Drawing.Point(32, 112);
+            this.SubHeaderLabel.Name = "SubHeaderLabel";
+            this.SubHeaderLabel.Size = new System.Drawing.Size(47, 17);
+            this.SubHeaderLabel.TabIndex = 3;
+            this.SubHeaderLabel.Text = "Кафе";
+            // 
+            // HeaderLabel
+            // 
+            this.HeaderLabel.AutoSize = true;
+            this.HeaderLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.ForeColor = System.Drawing.Color.White;
+            this.HeaderLabel.Location = new System.Drawing.Point(11, 90);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(78, 19);
+            this.HeaderLabel.TabIndex = 3;
+            this.HeaderLabel.Text = "BestCoffe";
             // 
             // pictureBox1
             // 
@@ -559,144 +442,447 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuImageButton1
+            // Pages
             // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowToggling = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.AllowZoomingOnFocus = false;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 10;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(40, 40);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(914, 3);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 40);
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.ZoomSpeed = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
+            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Pages.AllowTransitions = false;
+            this.Pages.Controls.Add(this.Clients);
+            this.Pages.Controls.Add(this.Staff);
+            this.Pages.Controls.Add(this.Dish);
+            this.Pages.Controls.Add(this.Orders);
+            this.Pages.Controls.Add(this.Delivery);
+            this.Pages.Location = new System.Drawing.Point(204, 149);
+            this.Pages.Multiline = true;
+            this.Pages.Name = "Pages";
+            this.Pages.Page = this.Delivery;
+            this.Pages.PageIndex = 4;
+            this.Pages.PageName = "Delivery";
+            this.Pages.PageTitle = "Доставка";
+            this.Pages.SelectedIndex = 0;
+            this.Pages.Size = new System.Drawing.Size(753, 450);
+            this.Pages.TabIndex = 8;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Pages.Transition = animation1;
+            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
-            // button1
+            // Clients
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::FastFoodDemo.Properties.Resources.delivery_25px2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 54);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "       Доставка";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.Clients.Controls.Add(this.ClientsPanel);
+            this.Clients.Location = new System.Drawing.Point(4, 4);
+            this.Clients.Name = "Clients";
+            this.Clients.Padding = new System.Windows.Forms.Padding(3);
+            this.Clients.Size = new System.Drawing.Size(745, 424);
+            this.Clients.TabIndex = 1;
+            this.Clients.Text = "Клиенты";
+            this.Clients.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // ClientsPanel
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 292);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(197, 54);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "       Сотрудники";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseCompatibleTextRendering = true;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            this.ClientsPanel.AutoScroll = true;
+            this.ClientsPanel.BackColor = System.Drawing.Color.Snow;
+            this.ClientsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientsPanel.Location = new System.Drawing.Point(3, 3);
+            this.ClientsPanel.Name = "ClientsPanel";
+            this.ClientsPanel.Size = new System.Drawing.Size(739, 418);
+            this.ClientsPanel.TabIndex = 0;
             // 
-            // button7
+            // Staff
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(12, 232);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(197, 54);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "       Клиенты";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            this.Staff.Controls.Add(this.StaffPanel);
+            this.Staff.Location = new System.Drawing.Point(4, 4);
+            this.Staff.Name = "Staff";
+            this.Staff.Size = new System.Drawing.Size(745, 424);
+            this.Staff.TabIndex = 2;
+            this.Staff.Text = "Сотрудники";
+            this.Staff.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // StaffPanel
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 54);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "       Заказы";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.StaffPanel.AutoScroll = true;
+            this.StaffPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPanel.Location = new System.Drawing.Point(0, 0);
+            this.StaffPanel.Name = "StaffPanel";
+            this.StaffPanel.Size = new System.Drawing.Size(745, 424);
+            this.StaffPanel.TabIndex = 1;
             // 
-            // button2
+            // Dish
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 54);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "       Что покушать?";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.Dish.Controls.Add(this.DishesPanel);
+            this.Dish.Location = new System.Drawing.Point(4, 4);
+            this.Dish.Name = "Dish";
+            this.Dish.Padding = new System.Windows.Forms.Padding(3);
+            this.Dish.Size = new System.Drawing.Size(745, 424);
+            this.Dish.TabIndex = 0;
+            this.Dish.Text = "Еда";
+            this.Dish.UseVisualStyleBackColor = true;
+            // 
+            // DishesPanel
+            // 
+            this.DishesPanel.AutoScroll = true;
+            this.DishesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DishesPanel.Location = new System.Drawing.Point(3, 3);
+            this.DishesPanel.Name = "DishesPanel";
+            this.DishesPanel.Size = new System.Drawing.Size(739, 418);
+            this.DishesPanel.TabIndex = 2;
+            // 
+            // Orders
+            // 
+            this.Orders.Controls.Add(this.OrdersPanel);
+            this.Orders.Location = new System.Drawing.Point(4, 4);
+            this.Orders.Name = "Orders";
+            this.Orders.Size = new System.Drawing.Size(745, 424);
+            this.Orders.TabIndex = 3;
+            this.Orders.Text = "Заказы";
+            this.Orders.UseVisualStyleBackColor = true;
+            // 
+            // OrdersPanel
+            // 
+            this.OrdersPanel.AutoScroll = true;
+            this.OrdersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrdersPanel.Location = new System.Drawing.Point(0, 0);
+            this.OrdersPanel.Name = "OrdersPanel";
+            this.OrdersPanel.Size = new System.Drawing.Size(745, 424);
+            this.OrdersPanel.TabIndex = 3;
+            // 
+            // Delivery
+            // 
+            this.Delivery.Controls.Add(this.DeliveryPanel);
+            this.Delivery.Location = new System.Drawing.Point(4, 4);
+            this.Delivery.Name = "Delivery";
+            this.Delivery.Size = new System.Drawing.Size(745, 424);
+            this.Delivery.TabIndex = 4;
+            this.Delivery.Text = "Доставка";
+            this.Delivery.UseVisualStyleBackColor = true;
+            // 
+            // DeliveryPanel
+            // 
+            this.DeliveryPanel.AutoScroll = true;
+            this.DeliveryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeliveryPanel.Location = new System.Drawing.Point(0, 0);
+            this.DeliveryPanel.Name = "DeliveryPanel";
+            this.DeliveryPanel.Size = new System.Drawing.Size(745, 424);
+            this.DeliveryPanel.TabIndex = 4;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.DragPanel;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // AddDeliveryButton
+            // 
+            this.AddDeliveryButton.ActiveImage = global::FastFoodDemo.Properties.Resources.delivery_96px;
+            this.AddDeliveryButton.AllowAnimations = true;
+            this.AddDeliveryButton.AllowBuffering = false;
+            this.AddDeliveryButton.AllowToggling = false;
+            this.AddDeliveryButton.AllowZooming = true;
+            this.AddDeliveryButton.AllowZoomingOnFocus = false;
+            this.AddDeliveryButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddDeliveryButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddDeliveryButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("AddDeliveryButton.ErrorImage")));
+            this.AddDeliveryButton.FadeWhenInactive = false;
+            this.AddDeliveryButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.AddDeliveryButton.Image = global::FastFoodDemo.Properties.Resources.delivery_96px;
+            this.AddDeliveryButton.ImageActive = global::FastFoodDemo.Properties.Resources.delivery_96px;
+            this.AddDeliveryButton.ImageLocation = null;
+            this.AddDeliveryButton.ImageMargin = 5;
+            this.AddDeliveryButton.ImageSize = new System.Drawing.Size(43, 43);
+            this.AddDeliveryButton.ImageZoomSize = new System.Drawing.Size(48, 48);
+            this.AddDeliveryButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddDeliveryButton.InitialImage")));
+            this.AddDeliveryButton.Location = new System.Drawing.Point(410, 101);
+            this.AddDeliveryButton.Name = "AddDeliveryButton";
+            this.AddDeliveryButton.Rotation = 0;
+            this.AddDeliveryButton.ShowActiveImage = true;
+            this.AddDeliveryButton.ShowCursorChanges = true;
+            this.AddDeliveryButton.ShowImageBorders = true;
+            this.AddDeliveryButton.ShowSizeMarkers = false;
+            this.AddDeliveryButton.Size = new System.Drawing.Size(48, 48);
+            this.AddDeliveryButton.TabIndex = 98;
+            this.AddDeliveryButton.ToolTipText = "Оформление доставки";
+            this.AddDeliveryButton.WaitOnLoad = false;
+            this.AddDeliveryButton.Zoom = 5;
+            this.AddDeliveryButton.ZoomSpeed = 10;
+            this.AddDeliveryButton.Click += new System.EventHandler(this.AddDeliveryButton_Click);
+            // 
+            // AddClientButton
+            // 
+            this.AddClientButton.ActiveImage = global::FastFoodDemo.Properties.Resources.customer_96px;
+            this.AddClientButton.AllowAnimations = true;
+            this.AddClientButton.AllowBuffering = false;
+            this.AddClientButton.AllowToggling = false;
+            this.AddClientButton.AllowZooming = true;
+            this.AddClientButton.AllowZoomingOnFocus = false;
+            this.AddClientButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddClientButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddClientButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("AddClientButton.ErrorImage")));
+            this.AddClientButton.FadeWhenInactive = false;
+            this.AddClientButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.AddClientButton.Image = global::FastFoodDemo.Properties.Resources.customer_96px;
+            this.AddClientButton.ImageActive = global::FastFoodDemo.Properties.Resources.customer_96px;
+            this.AddClientButton.ImageLocation = null;
+            this.AddClientButton.ImageMargin = 5;
+            this.AddClientButton.ImageSize = new System.Drawing.Size(43, 43);
+            this.AddClientButton.ImageZoomSize = new System.Drawing.Size(48, 48);
+            this.AddClientButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddClientButton.InitialImage")));
+            this.AddClientButton.Location = new System.Drawing.Point(410, 55);
+            this.AddClientButton.Name = "AddClientButton";
+            this.AddClientButton.Rotation = 0;
+            this.AddClientButton.ShowActiveImage = true;
+            this.AddClientButton.ShowCursorChanges = true;
+            this.AddClientButton.ShowImageBorders = true;
+            this.AddClientButton.ShowSizeMarkers = false;
+            this.AddClientButton.Size = new System.Drawing.Size(48, 48);
+            this.AddClientButton.TabIndex = 97;
+            this.AddClientButton.ToolTipText = "Добавление нового клиента";
+            this.AddClientButton.WaitOnLoad = false;
+            this.AddClientButton.Zoom = 5;
+            this.AddClientButton.ZoomSpeed = 10;
+            this.AddClientButton.Click += new System.EventHandler(this.AddClientButton_Click);
+            // 
+            // AddDishButton
+            // 
+            this.AddDishButton.ActiveImage = global::FastFoodDemo.Properties.Resources.icons8_настоящая_еда_для_еды_96;
+            this.AddDishButton.AllowAnimations = true;
+            this.AddDishButton.AllowBuffering = false;
+            this.AddDishButton.AllowToggling = false;
+            this.AddDishButton.AllowZooming = true;
+            this.AddDishButton.AllowZoomingOnFocus = false;
+            this.AddDishButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddDishButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddDishButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("AddDishButton.ErrorImage")));
+            this.AddDishButton.FadeWhenInactive = false;
+            this.AddDishButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.AddDishButton.Image = global::FastFoodDemo.Properties.Resources.icons8_настоящая_еда_для_еды_96;
+            this.AddDishButton.ImageActive = global::FastFoodDemo.Properties.Resources.icons8_настоящая_еда_для_еды_96;
+            this.AddDishButton.ImageLocation = null;
+            this.AddDishButton.ImageMargin = 5;
+            this.AddDishButton.ImageSize = new System.Drawing.Size(43, 43);
+            this.AddDishButton.ImageZoomSize = new System.Drawing.Size(48, 48);
+            this.AddDishButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddDishButton.InitialImage")));
+            this.AddDishButton.Location = new System.Drawing.Point(356, 101);
+            this.AddDishButton.Name = "AddDishButton";
+            this.AddDishButton.Rotation = 0;
+            this.AddDishButton.ShowActiveImage = true;
+            this.AddDishButton.ShowCursorChanges = true;
+            this.AddDishButton.ShowImageBorders = true;
+            this.AddDishButton.ShowSizeMarkers = false;
+            this.AddDishButton.Size = new System.Drawing.Size(48, 48);
+            this.AddDishButton.TabIndex = 96;
+            this.AddDishButton.ToolTipText = "Добавление нового блюда";
+            this.AddDishButton.WaitOnLoad = false;
+            this.AddDishButton.Zoom = 5;
+            this.AddDishButton.ZoomSpeed = 10;
+            this.AddDishButton.Click += new System.EventHandler(this.AddDishButton_Click);
+            // 
+            // AddStaffButton
+            // 
+            this.AddStaffButton.ActiveImage = global::FastFoodDemo.Properties.Resources.icons8_идентифицированный_пользователь_мужчина_96;
+            this.AddStaffButton.AllowAnimations = true;
+            this.AddStaffButton.AllowBuffering = false;
+            this.AddStaffButton.AllowToggling = false;
+            this.AddStaffButton.AllowZooming = true;
+            this.AddStaffButton.AllowZoomingOnFocus = true;
+            this.AddStaffButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddStaffButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddStaffButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("AddStaffButton.ErrorImage")));
+            this.AddStaffButton.FadeWhenInactive = false;
+            this.AddStaffButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.AddStaffButton.Image = global::FastFoodDemo.Properties.Resources.icons8_идентифицированный_пользователь_мужчина_96;
+            this.AddStaffButton.ImageActive = global::FastFoodDemo.Properties.Resources.icons8_идентифицированный_пользователь_мужчина_96;
+            this.AddStaffButton.ImageLocation = null;
+            this.AddStaffButton.ImageMargin = 5;
+            this.AddStaffButton.ImageSize = new System.Drawing.Size(43, 43);
+            this.AddStaffButton.ImageZoomSize = new System.Drawing.Size(48, 48);
+            this.AddStaffButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddStaffButton.InitialImage")));
+            this.AddStaffButton.Location = new System.Drawing.Point(356, 53);
+            this.AddStaffButton.Name = "AddStaffButton";
+            this.AddStaffButton.Rotation = 0;
+            this.AddStaffButton.ShowActiveImage = true;
+            this.AddStaffButton.ShowCursorChanges = true;
+            this.AddStaffButton.ShowImageBorders = true;
+            this.AddStaffButton.ShowSizeMarkers = false;
+            this.AddStaffButton.Size = new System.Drawing.Size(48, 48);
+            this.AddStaffButton.TabIndex = 95;
+            this.AddStaffButton.ToolTipText = "Добавление нового сотрудника";
+            this.AddStaffButton.WaitOnLoad = false;
+            this.AddStaffButton.Zoom = 5;
+            this.AddStaffButton.ZoomSpeed = 10;
+            this.AddStaffButton.Click += new System.EventHandler(this.AddStaffButton_Click);
+            // 
+            // DatePicker1
+            // 
+            this.DatePicker1.BackColor = System.Drawing.Color.White;
+            this.DatePicker1.BorderRadius = 0;
+            this.DatePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker1.Color = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DatePicker1.CustomFormat = "M/d/yyyy";
+            this.DatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
+            this.DatePicker1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker1.DisplayWeekNumbers = false;
+            this.DatePicker1.DPHeight = 0;
+            this.DatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePicker1.FillDatePicker = false;
+            this.DatePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.DatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker1.Icon")));
+            this.DatePicker1.IconColor = System.Drawing.Color.Transparent;
+            this.DatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
+            this.DatePicker1.LeftTextMargin = 5;
+            this.DatePicker1.Location = new System.Drawing.Point(521, 112);
+            this.DatePicker1.MinimumSize = new System.Drawing.Size(79, 35);
+            this.DatePicker1.Name = "DatePicker1";
+            this.DatePicker1.Size = new System.Drawing.Size(84, 35);
+            this.DatePicker1.TabIndex = 102;
+            this.DatePicker1.Visible = false;
+            // 
+            // DatePicker2
+            // 
+            this.DatePicker2.BackColor = System.Drawing.Color.White;
+            this.DatePicker2.BorderRadius = 0;
+            this.DatePicker2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker2.Color = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DatePicker2.CustomFormat = "M/d/yyyy";
+            this.DatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
+            this.DatePicker2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker2.DisplayWeekNumbers = false;
+            this.DatePicker2.DPHeight = 0;
+            this.DatePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePicker2.FillDatePicker = false;
+            this.DatePicker2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DatePicker2.ForeColor = System.Drawing.Color.Black;
+            this.DatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePicker2.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker2.Icon")));
+            this.DatePicker2.IconColor = System.Drawing.Color.Transparent;
+            this.DatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
+            this.DatePicker2.LeftTextMargin = 5;
+            this.DatePicker2.Location = new System.Drawing.Point(620, 112);
+            this.DatePicker2.MinimumSize = new System.Drawing.Size(84, 35);
+            this.DatePicker2.Name = "DatePicker2";
+            this.DatePicker2.Size = new System.Drawing.Size(84, 35);
+            this.DatePicker2.TabIndex = 103;
+            this.DatePicker2.Visible = false;
+            // 
+            // BeginLabel
+            // 
+            this.BeginLabel.AutoSize = true;
+            this.BeginLabel.BackColor = System.Drawing.Color.Transparent;
+            this.BeginLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BeginLabel.ForeColor = System.Drawing.Color.Black;
+            this.BeginLabel.Location = new System.Drawing.Point(526, 90);
+            this.BeginLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.BeginLabel.MinimumSize = new System.Drawing.Size(20, 20);
+            this.BeginLabel.Name = "BeginLabel";
+            this.BeginLabel.Size = new System.Drawing.Size(70, 20);
+            this.BeginLabel.TabIndex = 105;
+            this.BeginLabel.Text = "Начало";
+            this.BeginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BeginLabel.Visible = false;
+            // 
+            // EndLabel
+            // 
+            this.EndLabel.AutoSize = true;
+            this.EndLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EndLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EndLabel.ForeColor = System.Drawing.Color.Black;
+            this.EndLabel.Location = new System.Drawing.Point(629, 89);
+            this.EndLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.EndLabel.MinimumSize = new System.Drawing.Size(20, 20);
+            this.EndLabel.Name = "EndLabel";
+            this.EndLabel.Size = new System.Drawing.Size(60, 20);
+            this.EndLabel.TabIndex = 106;
+            this.EndLabel.Text = "Конец";
+            this.EndLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EndLabel.Visible = false;
+            // 
+            // ChoiceLabel
+            // 
+            this.ChoiceLabel.AutoSize = true;
+            this.ChoiceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ChoiceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChoiceLabel.ForeColor = System.Drawing.Color.Black;
+            this.ChoiceLabel.Location = new System.Drawing.Point(590, 60);
+            this.ChoiceLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.ChoiceLabel.MinimumSize = new System.Drawing.Size(38, 19);
+            this.ChoiceLabel.Name = "ChoiceLabel";
+            this.ChoiceLabel.Size = new System.Drawing.Size(38, 19);
+            this.ChoiceLabel.TabIndex = 104;
+            this.ChoiceLabel.Text = "или";
+            this.ChoiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChoiceLabel.Visible = false;
+            // 
+            // SearchDateButton
+            // 
+            this.SearchDateButton.ActiveImage = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.AllowAnimations = true;
+            this.SearchDateButton.AllowBuffering = false;
+            this.SearchDateButton.AllowToggling = false;
+            this.SearchDateButton.AllowZooming = true;
+            this.SearchDateButton.AllowZoomingOnFocus = false;
+            this.SearchDateButton.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDateButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SearchDateButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.ErrorImage")));
+            this.SearchDateButton.FadeWhenInactive = false;
+            this.SearchDateButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.SearchDateButton.Image = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.ImageActive = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.ImageLocation = null;
+            this.SearchDateButton.ImageMargin = 5;
+            this.SearchDateButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SearchDateButton.ImageZoomSize = new System.Drawing.Size(37, 37);
+            this.SearchDateButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.InitialImage")));
+            this.SearchDateButton.Location = new System.Drawing.Point(709, 112);
+            this.SearchDateButton.Name = "SearchDateButton";
+            this.SearchDateButton.Rotation = 0;
+            this.SearchDateButton.ShowActiveImage = true;
+            this.SearchDateButton.ShowCursorChanges = true;
+            this.SearchDateButton.ShowImageBorders = true;
+            this.SearchDateButton.ShowSizeMarkers = false;
+            this.SearchDateButton.Size = new System.Drawing.Size(37, 37);
+            this.SearchDateButton.TabIndex = 102;
+            this.SearchDateButton.ToolTipText = "Добавление нового блюда";
+            this.SearchDateButton.Visible = false;
+            this.SearchDateButton.WaitOnLoad = false;
+            this.SearchDateButton.Zoom = 5;
+            this.SearchDateButton.ZoomSpeed = 10;
+            this.SearchDateButton.Click += new System.EventHandler(this.SearchDateButton_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(957, 599);
-            this.Controls.Add(this.bunifuImageButton7);
-            this.Controls.Add(this.bunifuImageButton6);
-            this.Controls.Add(this.bunifuImageButton2);
-            this.Controls.Add(this.bunifuImageButton5);
-            this.Controls.Add(this.bunifuImageButton4);
-            this.Controls.Add(this.bunifuImageButton3);
-            this.Controls.Add(this.panelDatePicker);
+            this.Controls.Add(this.SearchDateButton);
+            this.Controls.Add(this.EndLabel);
+            this.Controls.Add(this.BeginLabel);
+            this.Controls.Add(this.ChoiceLabel);
+            this.Controls.Add(this.DatePicker2);
+            this.Controls.Add(this.DatePicker1);
+            this.Controls.Add(this.AddDeliveryButton);
+            this.Controls.Add(this.AddClientButton);
+            this.Controls.Add(this.AddDishButton);
+            this.Controls.Add(this.AddStaffButton);
             this.Controls.Add(this.Pages);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.DragPanel);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -704,57 +890,62 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.DragPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelDatePicker.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Pages.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
-            this.Sotrud.ResumeLayout(false);
+            this.Staff.ResumeLayout(false);
             this.Dish.ResumeLayout(false);
             this.Orders.ResumeLayout(false);
             this.Delivery.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button DishShowButton;
+        private System.Windows.Forms.Panel DragPanel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SubHeaderLabel;
+        private System.Windows.Forms.Label HeaderLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button buttonHelp;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panelDatePicker;
+        private System.Windows.Forms.Button ClientsShowButton;
+        private System.Windows.Forms.Button ButtonHelp;
+        private System.Windows.Forms.Button StaffShowButton;
         public Bunifu.UI.WinForms.BunifuDatePicker datePickerGraphic;
-        public System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage Sotrud;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TabPage Staff;
+        public System.Windows.Forms.FlowLayoutPanel ClientsPanel;
         private System.Windows.Forms.TabPage Clients;
         private System.Windows.Forms.TabPage Dish;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        public System.Windows.Forms.FlowLayoutPanel DishesPanel;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+        private Bunifu.UI.WinForms.BunifuImageButton ExitButton;
         private System.Windows.Forms.TabPage Orders;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton4;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton5;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.FlowLayoutPanel OrdersPanel;
+        public System.Windows.Forms.FlowLayoutPanel StaffPanel;
+        private Bunifu.UI.WinForms.BunifuImageButton AddStaffButton;
+        private Bunifu.UI.WinForms.BunifuImageButton AddDishButton;
+        private System.Windows.Forms.Button DeliveryShowButton;
         private System.Windows.Forms.TabPage Delivery;
         public Bunifu.UI.WinForms.BunifuPages Pages;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton6;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton7;
+        public System.Windows.Forms.FlowLayoutPanel DeliveryPanel;
+        private Bunifu.UI.WinForms.BunifuImageButton AddClientButton;
+        private Bunifu.UI.WinForms.BunifuImageButton AddDeliveryButton;
+        public Bunifu.UI.WinForms.BunifuTextBox SearchField;
+        private System.Windows.Forms.Button OrdersShowButton;
+        private Bunifu.UI.WinForms.BunifuImageButton SearchButton;
+        public Bunifu.UI.WinForms.BunifuDatePicker DatePicker1;
+        public Bunifu.UI.WinForms.BunifuDatePicker DatePicker2;
+        private Bunifu.Framework.UI.BunifuCustomLabel BeginLabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel EndLabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel ChoiceLabel;
+        private Bunifu.UI.WinForms.BunifuImageButton SearchDateButton;
     }
 }
 

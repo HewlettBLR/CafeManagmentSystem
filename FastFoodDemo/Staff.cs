@@ -7,12 +7,13 @@ namespace FastFoodDemo
     public partial class Staff : UserControl
     {
         public int ID { get; set; }
+
         public Staff()
         {
             InitializeComponent();
         }
 
-        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Вы действительно хотите удалить сотрудника?", "Подтверждение удаления",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -25,18 +26,19 @@ namespace FastFoodDemo
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-                FormMain.SR.RefreshStaff();
+                FormMain.FM.RefreshStaff();
                 MessageBox.Show("Запись успешно удалена!", "Запись удалена", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void BunifuImageButton3_Click(object sender, EventArgs e)
+
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
-            StaffAdd StaffAdd = new StaffAdd
+            StaffAdd staffAdd = new StaffAdd
             {
                 ID = ID,
                 Edit = true
             };
-            StaffAdd.Show();
+            staffAdd.Show();
         }
     }
 }

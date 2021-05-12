@@ -7,12 +7,13 @@ namespace FastFoodDemo
     {
         public int ID { get; set; }
         public bool Edit { get; set; }
+
         public Delivery()
         {
             InitializeComponent();
         }
 
-        private void BunifuButton1_Click(object sender, System.EventArgs e)
+        private void DeleteButton_Click(object sender, System.EventArgs e)
         {
             if (MessageBox.Show("Вы действительно хотите удалить запись?", "Подтверждение удаления",
               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -25,12 +26,12 @@ namespace FastFoodDemo
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-                FormMain.SR.RefreshDelivery();
+                FormMain.FM.RefreshDelivery();
                 MessageBox.Show("Запись успешно удалена!", "Запись удалена", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void BunifuButton2_Click(object sender, System.EventArgs e)
+        private void UpdateButton_Click(object sender, System.EventArgs e)
         {
             DeliveryAdd deliveryAdd = new DeliveryAdd
             {
