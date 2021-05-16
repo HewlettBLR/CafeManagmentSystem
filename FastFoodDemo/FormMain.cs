@@ -10,7 +10,71 @@ namespace FastFoodDemo
     {
         public int ID { get; set; }
         public static FormMain FM { get; set; }
-        private string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = CafeDB.accdb;";
+        readonly string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = CafeDB.accdb;";
+       
+        readonly string QueryDish = "SELECT * FROM Dishes, Units_Of_Measurement " +
+                                           "WHERE Dishes.ID_Weight = Units_Of_Measurement.ID_Weight ";
+
+        readonly string QueryOrders = "SELECT Dishes.ID_Dish, " +
+                                      "Dishes.Name_Dish, " +
+                                      "Staff.Surname_Staff, " +
+                                      "Staff.Name_Staff, " +
+                                      "Staff.Middle_Name_Staff, " +
+                                      "Orders.ID_Order, " +
+                                      "Orders.Date_Order, " +
+                                      "Orders.Number_Of_Servings, " +
+                                      "Type_Order.ID_Type_Order, " +
+                                      "Type_Order.Name_Type_Order, " +
+                                      "Clients.ID_Client, " +
+                                      "Clients.Surname_Client, " +
+                                      "Clients.Name_Client, " +
+                                      "Clients.Middle_Name_Client, " +
+                                      "(Orders.Number_Of_Servings*Dishes.Price_Dish) AS [Итоговая цена/бел руб], " +
+                                      "Staff.ID_Staff, " +
+                                      "Orders.ID_Dish, " +
+                                      "Orders.ID_Type_Order, " +
+                                      "Orders.ID_Client, " +
+                                      "Units_Of_Measurement.Abbreviation_Weight, " +
+                                      "Units_Of_Measurement.ID_Weight, " +
+                                      "Dishes.Weight_Dish, " +
+                                      "Orders.Lead_Time" +
+                                      " FROM Staff, Orders, Dishes, Type_Order, Clients, Units_Of_Measurement" +
+                                      " WHERE Staff.ID_Staff = Orders.ID_Staff " +
+                                      "AND Orders.ID_Dish = Dishes.ID_Dish " +
+                                      "AND Orders.ID_Type_Order = Type_Order.ID_Type_Order " +
+                                      "AND Orders.ID_Client = Clients.ID_Client " +
+                                      "AND Units_Of_Measurement.ID_Weight = Dishes.ID_Weight ";
+
+        readonly string QueryClients = "SELECT * FROM Clients ";
+
+        readonly string QueryStaff = "SELECT ID_Staff, " +
+                                     "Surname_Staff, " +
+                                     "Name_Staff, " +
+                                     "Middle_Name_Staff, " +
+                                     "Date_Of_Employment_Staff, " +
+                                     "Adress_Staff, " +
+                                     "Mob_Phone_Staff, " +
+                                     "Passport_№_Staff, " +
+                                     "Mail_Staff, " +
+                                     "Hiring_Status.Name_Hiring, " +
+                                     "Positions.Name_Poss, " +
+                                     "Available " +
+                                     " FROM Staff, Hiring_Status, Positions " +
+                                     " WHERE Staff.Hiring_Staff = Hiring_Status.ID_Hiring " +
+                                     " AND Staff.Position_Staff = Positions.ID_Poss ";
+
+        readonly string QueryDelivery = "SELECT Orders.ID_Order, " +
+                                        "Delivery.ID_Order, " +
+                                        "Staff.Surname_Staff, " +
+                                        "Staff.Name_Staff, " +
+                                        "Delivery.Adress_Delivery, " +
+                                        "Delivery.Time_Delivery, " +
+                                        "Orders.Date_Order, " +
+                                        "Delivery.ID_Delivery" +
+                                        " FROM Staff, Delivery, Orders" +
+                                        " WHERE Orders.ID_Order = Delivery.ID_Order " +
+                                        "AND Delivery.ID_Courier = Staff.ID_Staff " +
+                                        "AND Orders.ID_Type_Order = 2 ";
 
         public FormMain()
         {
@@ -19,7 +83,102 @@ namespace FastFoodDemo
             SidePanel.Height = DishShowButton.Height;
             SidePanel.Top = DishShowButton.Top;
         }
-        public void ShowHideDatePicker (bool visible)
+        public void RestartDGV()
+        {
+            DGView.DataSource = null;
+            DGView.Rows.Clear();
+            DGView.Columns.Clear();
+            DGView.Update();
+            DGView.Refresh();
+        }
+
+        public void DGDish(DataTable dt)
+        {
+            DGView.DataSource = dt;
+            DGView.Columns[0].Visible = false;
+            DGView.Columns[1].HeaderText = "Название\n" + " блюда";
+            DGView.Columns[2].HeaderText = "Рецепт";
+            DGView.Columns[3].HeaderText = "Вес";
+            DGView.Columns[4].HeaderText = "Цена/бел.руб";
+            DGView.Columns[5].Visible = false;
+            DGView.Columns[6].Visible = false;
+            DGView.Columns[7].Visible = false;
+            DGView.Columns[8].Visible = false;
+            DGView.Columns[9].Visible = false;
+            DGView.Columns[10].HeaderText = "Ед.измерения";
+        }
+
+        public void DGOrders(DataTable dt)
+        {
+            DGView.DataSource = dt;
+            DGView.Columns[0].Visible = false;
+            DGView.Columns[1].HeaderText = "Название\n" + "блюда";
+            DGView.Columns[2].HeaderText = "Фам.\n" + "сотрудника";
+            DGView.Columns[3].HeaderText = "Имя\n" + "сотрудника";
+            DGView.Columns[4].Visible = false;
+            DGView.Columns[5].Visible = false;
+            DGView.Columns[6].HeaderText = "Дата\n" + "заказа";
+            DGView.Columns[6].DefaultCellStyle.Format = @"MM/dd/yyyy";
+            DGView.Columns[7].HeaderText = "Кол-во";
+            DGView.Columns[8].Visible = false;
+            DGView.Columns[9].HeaderText = "Тип\n" + "заказа";
+            DGView.Columns[10].Visible = false;
+            DGView.Columns[11].HeaderText = "Фам.\n" + "клиента";
+            DGView.Columns[12].HeaderText = "Имя\n" + "клиента";
+            DGView.Columns[13].Visible = false;
+            DGView.Columns[14].HeaderText = "Итогова цена\n" + "/бел.руб";
+            DGView.Columns[15].Visible = false;
+            DGView.Columns[16].Visible = false;
+            DGView.Columns[17].Visible = false;
+            DGView.Columns[18].Visible = false;
+            DGView.Columns[19].HeaderText = "Ед.измерения";
+            DGView.Columns[20].Visible = false;
+            DGView.Columns[21].HeaderText = "Вес";
+            DGView.Columns[22].Visible = false;
+            DGView.Columns[22].HeaderText = "Время\n" + "выполнения";
+            DGView.Columns[22].DefaultCellStyle.Format = @"mm\:ss";
+        }
+
+        public void DGClients(DataTable dt)
+        {
+            DGView.DataSource = dt;
+            DGView.Columns[0].Visible = false;
+            DGView.Columns[1].HeaderText = "Фам.\n" + "клиента";
+            DGView.Columns[2].HeaderText = "Имя\n" + "клиента";
+            DGView.Columns[3].Visible = false;
+            DGView.Columns[4].HeaderText = "Адрес\n" + "клиента";
+            DGView.Columns[5].HeaderText = "Тел.\n" + "клиента";
+        }
+
+        public void DGStaff(DataTable dt)
+        {
+            DGView.DataSource = dt;
+            DGView.Columns[0].Visible = false;
+            DGView.Columns[1].HeaderText = "Фам.\n" + "сотрудника";
+            DGView.Columns[2].HeaderText = "Имя\n" + "сотрудника";
+            DGView.Columns[3].Visible = false;
+            DGView.Columns[4].HeaderText = "Дата\n" + "найма";
+            DGView.Columns[5].HeaderText = "Адрес";
+            DGView.Columns[6].HeaderText = "Тел.";
+            DGView.Columns[7].HeaderText = "Паспорт";
+            DGView.Columns[8].HeaderText = "Почта\n";
+            DGView.Columns[10].HeaderText = "Должность";
+            DGView.Columns[9].HeaderText = "Статус\n" + "найма";
+            DGView.Columns[11].Visible = false;
+        }
+
+        public void DGDelivery(DataTable dt)
+        {
+            DGView.DataSource = dt;
+            DGView.Columns[0].Visible = false;
+            DGView.Columns[1].Visible = false;
+            DGView.Columns[2].HeaderText = "Фам.\n" + "сотрудника";
+            DGView.Columns[3].HeaderText = "Имя\n" + "сотрудника";
+            DGView.Columns[4].HeaderText = "Адрес\n" + "доставки";
+            DGView.Columns[5].Visible = false;
+            DGView.Columns[6].Visible = false;
+        }
+        public void ShowHideDatePicker(bool visible)
         {
             DatePicker1.Visible = visible;
             DatePicker2.Visible = visible;
@@ -40,10 +199,12 @@ namespace FastFoodDemo
         //Filling UserControls with data and diplaying it
         public void LoadDish(string query)
         {
+            RestartDGV();
             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                DGDish(dataTable);
                 Dish[] cards = new Dish[dataTable.Rows.Count];
                 for (int i = 0; i < cards.Length; i++)
                 {
@@ -64,10 +225,12 @@ namespace FastFoodDemo
 
         public void LoadOrders(string query)
         {
+            RestartDGV();
             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                DGOrders(dataTable);
                 Orders[] cards = new Orders[dataTable.Rows.Count];
                 for (int i = 0; i < cards.Length; i++)
                 {
@@ -98,10 +261,12 @@ namespace FastFoodDemo
 
         public void LoadClients(string query)
         {
+            RestartDGV();
             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                DGClients(dataTable);
                 Clients[] cards = new Clients[dataTable.Rows.Count];
                 for (int i = 0; i < cards.Length; i++)
                 {
@@ -123,10 +288,12 @@ namespace FastFoodDemo
 
         public void LoadStaff(string query)
         {
+            RestartDGV();
             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                DGStaff(dataTable);
                 Staff[] cards = new Staff[dataTable.Rows.Count];
                 for (int i = 0; i < cards.Length; i++)
                 {
@@ -152,10 +319,12 @@ namespace FastFoodDemo
 
         public void LoadDelivery(string query)
         {
+            RestartDGV();
             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                DGDelivery(dataTable);
                 Delivery[] cards = new Delivery[dataTable.Rows.Count];
                 for (int i = 0; i < cards.Length; i++)
                 {
@@ -178,9 +347,7 @@ namespace FastFoodDemo
         //Updating the displaying data in UserControls
         public void RefreshDish()
         {
-            string query = "SELECT * FROM Dishes, Units_Of_Measurement " +
-                           "WHERE Dishes.ID_Weight = Units_Of_Measurement.ID_Weight";
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryDish, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -216,36 +383,7 @@ namespace FastFoodDemo
 
         public void RefreshOrder()
         {
-            string query = "SELECT Dishes.ID_Dish, " +
-                            "Dishes.Name_Dish, " +
-                            "Staff.Surname_Staff, " +
-                            "Staff.Name_Staff, " +
-                            "Staff.Middle_Name_Staff, " +
-                            "Orders.ID_Order, " +
-                            "Orders.Date_Order, " +
-                            "Orders.Number_Of_Servings, " +
-                            "Type_Order.ID_Type_Order, " +
-                            "Type_Order.Name_Type_Order, " +
-                            "Clients.ID_Client, " +
-                            "Clients.Surname_Client, " +
-                            "Clients.Name_Client, " +
-                            "Clients.Middle_Name_Client, " +
-                            "(Orders.Number_Of_Servings*Dishes.Price_Dish) AS [Итоговая цена/бел руб], " +
-                            "Staff.ID_Staff, " +
-                            "Orders.ID_Dish, " +
-                            "Orders.ID_Type_Order, " +
-                            "Orders.ID_Client, " +
-                            "Units_Of_Measurement.Abbreviation_Weight, " +
-                            "Units_Of_Measurement.ID_Weight, " +
-                            "Dishes.Weight_Dish, " +
-                            "Orders.Lead_Time" +
-                            " FROM Staff, Orders, Dishes, Type_Order, Clients, Units_Of_Measurement" +
-                            " WHERE Staff.ID_Staff = Orders.ID_Staff " +
-                            "AND Orders.ID_Dish = Dishes.ID_Dish " +
-                            "AND Orders.ID_Type_Order = Type_Order.ID_Type_Order " +
-                            "AND Orders.ID_Client = Clients.ID_Client " +
-                            "AND Units_Of_Measurement.ID_Weight = Dishes.ID_Weight";
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryOrders, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -270,7 +408,6 @@ namespace FastFoodDemo
                 {
                     cards[i] = cc[i] as Orders;
                     cards[i].ID = (int)dataTable.Rows[i][5];
-
                     cards[i].HeaderLabel.Text = "Заказ " + dataTable.Rows[i][5].ToString();
                     //Клиент
                     cards[i].SurnameClientField.Text = dataTable.Rows[i][11].ToString();
@@ -286,7 +423,6 @@ namespace FastFoodDemo
                     cards[i].CountField.Text = dataTable.Rows[i][7].ToString();
                     cards[i].WayOfReceptionField.Text = dataTable.Rows[i][9].ToString();
                     cards[i].LeadTimeField.Text = dataTable.Rows[i][22].ToString();
-
                     cards[i].Parent = OrdersPanel;
                     cards[i].Name = "OrderCard";
                 }
@@ -295,8 +431,7 @@ namespace FastFoodDemo
 
         public void RefreshClient()
         {
-            string query = "SELECT * FROM Clients";
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryClients, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -306,7 +441,7 @@ namespace FastFoodDemo
                     cc = ClientsPanel.Controls.Find("ClientCard", true);
                     if (cc.Length < dataTable.Rows.Count)
                     {
-                        Dish newCard = new Dish
+                        Clients newCard = new Clients
                         {
                             Name = "ClientCard",
                             Parent = ClientsPanel
@@ -333,22 +468,7 @@ namespace FastFoodDemo
 
         public void RefreshStaff()
         {
-            string query = "SELECT ID_Staff, " +
-                           "Surname_Staff, " +
-                           "Name_Staff, " +
-                           "Middle_Name_Staff, " +
-                           "Date_Of_Employment_Staff, " +
-                           "Adress_Staff, " +
-                           "Mob_Phone_Staff, " +
-                           "Passport_№_Staff, " +
-                           "Mail_Staff, " +
-                           "Hiring_Status.Name_Hiring, " +
-                           "Positions.Name_Poss, " +
-                           "Available " +
-                           " FROM Staff, Hiring_Status, Positions " +
-                           " WHERE Staff.Hiring_Staff = Hiring_Status.ID_Hiring " +
-                           "AND Staff.Position_Staff = Positions.ID_Poss";
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryStaff, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -389,19 +509,7 @@ namespace FastFoodDemo
 
         public void RefreshDelivery()
         {
-            string query = "SELECT Orders.ID_Order, " +
-                           "Delivery.ID_Order, " +
-                           "Staff.Surname_Staff, " +
-                           "Staff.Name_Staff, " +
-                           "Delivery.Adress_Delivery, " +
-                           "Delivery.Time_Delivery, " +
-                           "Orders.Date_Order, " +
-                           "Delivery.ID_Delivery" +
-                           " FROM Staff, Delivery, Orders" +
-                           " WHERE Orders.ID_Order = Delivery.ID_Order " +
-                           "AND Delivery.ID_Courier = Staff.ID_Staff " +
-                           "AND Orders.ID_Type_Order = 2";
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectionString))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryDelivery, connectionString))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -442,10 +550,7 @@ namespace FastFoodDemo
             DishesPanel.Controls.Clear();
             SidePanel.Height = DishShowButton.Height;
             SidePanel.Top = DishShowButton.Top;
-
-            LoadDish("SELECT * FROM Dishes, Units_Of_Measurement " +
-                      "WHERE Dishes.ID_Weight = Units_Of_Measurement.ID_Weight");
-
+            LoadDish(QueryDish);
             Pages.SelectedTab = Dish;
         }
 
@@ -455,37 +560,7 @@ namespace FastFoodDemo
             OrdersPanel.Controls.Clear();
             SidePanel.Height = OrdersShowButton.Height;
             SidePanel.Top = OrdersShowButton.Top;
-
-            LoadOrders("SELECT Dishes.ID_Dish, " +
-                       "Dishes.Name_Dish, " +
-                       "Staff.Surname_Staff, " +
-                       "Staff.Name_Staff, " +
-                       "Staff.Middle_Name_Staff, " +
-                       "Orders.ID_Order, " +
-                       "Orders.Date_Order, " +
-                       "Orders.Number_Of_Servings, " +
-                       "Type_Order.ID_Type_Order, " +
-                       "Type_Order.Name_Type_Order, " +
-                       "Clients.ID_Client, " +
-                       "Clients.Surname_Client, " +
-                       "Clients.Name_Client, " +
-                       "Clients.Middle_Name_Client, " +
-                       "(Orders.Number_Of_Servings*Dishes.Price_Dish) AS [Итоговая цена/бел руб], " +
-                       "Staff.ID_Staff, " +
-                       "Orders.ID_Dish, " +
-                       "Orders.ID_Type_Order, " +
-                       "Orders.ID_Client, " +
-                       "Units_Of_Measurement.Abbreviation_Weight, " +
-                       "Units_Of_Measurement.ID_Weight, " +
-                       "Dishes.Weight_Dish, " +
-                       "Orders.Lead_Time" +
-                       " FROM Staff, Orders, Dishes, Type_Order, Clients, Units_Of_Measurement" +
-                       " WHERE Staff.ID_Staff = Orders.ID_Staff " +
-                       "AND Orders.ID_Dish = Dishes.ID_Dish " +
-                       "AND Orders.ID_Type_Order = Type_Order.ID_Type_Order " +
-                       "AND Orders.ID_Client = Clients.ID_Client " +
-                       "AND Units_Of_Measurement.ID_Weight = Dishes.ID_Weight");
-
+            LoadOrders(QueryOrders);
             Pages.SelectedTab = Orders;
         }
 
@@ -495,9 +570,7 @@ namespace FastFoodDemo
             ClientsPanel.Controls.Clear();
             SidePanel.Height = ClientsShowButton.Height;
             SidePanel.Top = ClientsShowButton.Top;
-
-            LoadClients("SELECT * FROM Clients");
-
+            LoadClients(QueryClients);
             Pages.SelectedTab = Clients;
         }
 
@@ -507,23 +580,7 @@ namespace FastFoodDemo
             StaffPanel.Controls.Clear();
             SidePanel.Height = StaffShowButton.Height;
             SidePanel.Top = StaffShowButton.Top;
-
-            LoadStaff("SELECT ID_Staff, " +
-                      "Surname_Staff, " +
-                      "Name_Staff, " +
-                      "Middle_Name_Staff, " +
-                      "Date_Of_Employment_Staff, " +
-                      "Adress_Staff, " +
-                      "Mob_Phone_Staff, " +
-                      "Passport_№_Staff, " +
-                      "Mail_Staff, " +
-                      "Hiring_Status.Name_Hiring, " +
-                      "Positions.Name_Poss, " +
-                      "Available " +
-                      " FROM Staff, Hiring_Status, Positions " +
-                      " WHERE Staff.Hiring_Staff = Hiring_Status.ID_Hiring " +
-                      " AND Staff.Position_Staff = Positions.ID_Poss");
-
+            LoadStaff(QueryStaff);
             Pages.SelectedTab = Staff;
         }
 
@@ -533,20 +590,7 @@ namespace FastFoodDemo
             DeliveryPanel.Controls.Clear();
             SidePanel.Height = DeliveryShowButton.Height;
             SidePanel.Top = DeliveryShowButton.Top;
-
-            LoadDelivery("SELECT Orders.ID_Order, " +
-                         "Delivery.ID_Order, " +
-                         "Staff.Surname_Staff, " +
-                         "Staff.Name_Staff, " +
-                         "Delivery.Adress_Delivery, " +
-                         "Delivery.Time_Delivery, " +
-                         "Orders.Date_Order, " +
-                         "Delivery.ID_Delivery" +
-                         " FROM Staff, Delivery, Orders" +
-                         " WHERE Orders.ID_Order = Delivery.ID_Order " +
-                         "AND Delivery.ID_Courier = Staff.ID_Staff " +
-                         "AND Orders.ID_Type_Order = 2");
-
+            LoadDelivery(QueryDelivery);
             Pages.SelectedTab = Delivery;
         }
 
@@ -557,12 +601,8 @@ namespace FastFoodDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //DatePicker1.Tag = $" = \"{datePickerGraphic.Value.ToShortDateString()}\"";
-            //DatePicker2.Tag = $" = \"{datePickerGraphic.Value.ToShortDateString()}\"";
-
             Pages.SelectedTab = Dish;
-            LoadDish("SELECT * FROM Dishes, Units_Of_Measurement " +
-                     "WHERE Dishes.ID_Weight = Units_Of_Measurement.ID_Weight");
+            LoadDish(QueryDish);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -603,188 +643,128 @@ namespace FastFoodDemo
                 if (Pages.SelectedTab == Dish)
                 {
                     DishesPanel.Controls.Clear();
-
-                    LoadDish("SELECT * FROM Dishes, Units_Of_Measurement WHERE " +
-                        "Dishes.ID_Weight = Units_Of_Measurement.ID_Weight " +
-                        "AND Name_Dish LIKE '%" + SearchField.Text + "'");
+                    LoadDish(QueryDish + "AND Name_Dish LIKE '%" + SearchField.Text + "'");
                 }
 
                 if (Pages.SelectedTab == Orders)
                 {
                     OrdersPanel.Controls.Clear();
-
-                    LoadOrders("SELECT Dishes.ID_Dish, " +
-                               "Dishes.Name_Dish, " +
-                               "Staff.Surname_Staff, " +
-                               "Staff.Name_Staff, " +
-                               "Staff.Middle_Name_Staff, " +
-                               "Orders.ID_Order, " +
-                               "Orders.Date_Order, " +
-                               "Orders.Number_Of_Servings, " +
-                               "Type_Order.ID_Type_Order, " +
-                               "Type_Order.Name_Type_Order, " +
-                               "Clients.ID_Client, " +
-                               "Clients.Surname_Client, " +
-                               "Clients.Name_Client, " +
-                               "Clients.Middle_Name_Client, " +
-                               "(Orders.Number_Of_Servings*Dishes.Price_Dish) AS [Итоговая цена/бел руб], " +
-                               "Staff.ID_Staff, Orders.ID_Dish, " +
-                               "Orders.ID_Type_Order, " +
-                               "Orders.ID_Client, " +
-                               "Units_Of_Measurement.Abbreviation_Weight, " +
-                               "Units_Of_Measurement.ID_Weight, " +
-                               "Dishes.Weight_Dish, " +
-                               "Orders.Lead_Time" +
-                               " FROM Staff, Orders, Dishes, Type_Order, Clients, Units_Of_Measurement" +
-                               " WHERE Staff.ID_Staff = Orders.ID_Staff " +
-                               "AND Orders.ID_Dish = Dishes.ID_Dish " +
-                               "AND Orders.ID_Type_Order = Type_Order.ID_Type_Order " +
-                               "AND Orders.ID_Client = Clients.ID_Client " +
-                               "AND Units_Of_Measurement.ID_Weight = Dishes.ID_Weight " +
-                               "AND (Orders.ID_Order Like '%" + SearchField.Text + "' " +
-                               "OR Staff.Surname_Staff LIKE '%" + SearchField.Text + "') ");
+                    LoadOrders(QueryOrders + "AND (Orders.ID_Order Like '%" + SearchField.Text + "' " +
+                                             "OR Staff.Surname_Staff LIKE '%" + SearchField.Text + "') ");
                 }
 
                 if (Pages.SelectedTab == Clients)
                 {
                     ClientsPanel.Controls.Clear();
-
-                    LoadClients("SELECT * FROM Clients where Surname_Client LIKE '%" + SearchField.Text + "'");
+                    LoadClients(QueryClients + "WHERE Surname_Client LIKE '%" + SearchField.Text + "'");
                 }
 
                 if (Pages.SelectedTab == Staff)
                 {
                     StaffPanel.Controls.Clear();
-
-                    LoadStaff("SELECT ID_Staff, " +
-                              "Surname_Staff, " +
-                              "Name_Staff, " +
-                              "Middle_Name_Staff, " +
-                              "Date_Of_Employment_Staff, " +
-                              "Adress_Staff, " +
-                              "Mob_Phone_Staff, " +
-                              "Passport_№_Staff, " +
-                              "Mail_Staff, " +
-                              "Hiring_Status.Name_Hiring, " +
-                              "Positions.Name_Poss, " +
-                              "Available " +
-                              "FROM Staff, Hiring_Status, Positions " +
-                              "WHERE Staff.Hiring_Staff = Hiring_Status.ID_Hiring " +
-                              "AND Staff.Position_Staff = Positions.ID_Poss " +
-                              "AND Surname_Staff LIKE '%" + SearchField.Text + "'");
+                    LoadStaff(QueryStaff + "AND Surname_Staff LIKE '%" + SearchField.Text + "'");
                 }
 
                 if (Pages.SelectedTab == Delivery)
                 {
                     DeliveryPanel.Controls.Clear();
-
-                    LoadDelivery("SELECT Orders.ID_Order, " +
-                                 "Delivery.ID_Order, " +
-                                 "Staff.Surname_Staff, " +
-                                 "Staff.Name_Staff, " +
-                                 "Delivery.Adress_Delivery, " +
-                                 "Delivery.Time_Delivery, " +
-                                 "Orders.Date_Order, " +
-                                 "Delivery.ID_Delivery" +
-                                 " FROM Staff, Delivery, Orders" +
-                                 " WHERE Orders.ID_Order = Delivery.ID_Order " +
-                                 " AND Delivery.ID_Courier = Staff.ID_Staff " +
-                                 " AND Orders.ID_Type_Order = 2" +
-                                 " AND (Delivery.ID_Delivery LIKE '%" + SearchField.Text + "' " +
-                                 " OR Staff.Surname_Staff LIKE '%" + SearchField.Text + "')");
+                    LoadDelivery(QueryDelivery + " AND (Delivery.ID_Delivery LIKE '%" + SearchField.Text + "' " +
+                                                 " OR Staff.Surname_Staff LIKE '%" + SearchField.Text + "')");
                 }
             }
         }
 
         private void SearchDateButton_Click(object sender, EventArgs e)
-        { 
+        {
             if (Pages.SelectedTab == Orders)
             {
                 OrdersPanel.Controls.Clear();
-
-              LoadOrders("SELECT Dishes.ID_Dish, " +
-                           "Dishes.Name_Dish, " +
-                           "Staff.Surname_Staff, " +
-                           "Staff.Name_Staff, " +
-                           "Staff.Middle_Name_Staff, " +
-                           "Orders.ID_Order, " +
-                           "Orders.Date_Order, " +
-                           "Orders.Number_Of_Servings, " +
-                           "Type_Order.ID_Type_Order, " +
-                           "Type_Order.Name_Type_Order, " +
-                           "Clients.ID_Client, " +
-                           "Clients.Surname_Client, " +
-                           "Clients.Name_Client, " +
-                           "Clients.Middle_Name_Client, " +
-                           "(Orders.Number_Of_Servings*Dishes.Price_Dish) AS [Итоговая цена/бел руб], " +
-                           "Staff.ID_Staff, Orders.ID_Dish, " +
-                           "Orders.ID_Type_Order, " +
-                           "Orders.ID_Client, " +
-                           "Units_Of_Measurement.Abbreviation_Weight, " +
-                           "Units_Of_Measurement.ID_Weight, " +
-                           "Dishes.Weight_Dish, " +
-                           "Orders.Lead_Time" +
-                           " FROM Staff, Orders, Dishes, Type_Order, Clients, Units_Of_Measurement" +
-                           " WHERE Staff.ID_Staff = Orders.ID_Staff " +
-                           "AND Orders.ID_Dish = Dishes.ID_Dish " +
-                           "AND Orders.ID_Type_Order = Type_Order.ID_Type_Order " +
-                           "AND Orders.ID_Client = Clients.ID_Client " +
-                           "AND Units_Of_Measurement.ID_Weight = Dishes.ID_Weight " +
-                           "AND " +
-                           "Orders.Date_Order BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#"+
-                           "OR " +
-                           "Orders.Date_Order BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") "
-                            );
+                LoadOrders(QueryOrders + "AND " + "Orders.Date_Order BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#" + "OR " +
+                                         "Orders.Date_Order BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") " );
             }
 
             if (Pages.SelectedTab == Staff)
             {
                 StaffPanel.Controls.Clear();
-
-                LoadStaff("SELECT ID_Staff, " +
-                          "Surname_Staff, " +
-                          "Name_Staff, " +
-                          "Middle_Name_Staff, " +
-                          "Date_Of_Employment_Staff, " +
-                          "Adress_Staff, " +
-                          "Mob_Phone_Staff, " +
-                          "Passport_№_Staff, " +
-                          "Mail_Staff, " +
-                          "Hiring_Status.Name_Hiring, " +
-                          "Positions.Name_Poss, " +
-                          "Available " +
-                          "FROM Staff, Hiring_Status, Positions " +
-                          "WHERE Staff.Hiring_Staff = Hiring_Status.ID_Hiring " +
-                          "AND Staff.Position_Staff = Positions.ID_Poss " +
-                          "AND " +
-                          "Staff.Date_Of_Employment_Staff BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#" +
-                          "OR " +
-                          "Staff.Date_Of_Employment_Staff BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") "
-                           );
+                LoadStaff(QueryStaff + "AND " + "Staff.Date_Of_Employment_Staff BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#" + "OR " + 
+                                       "Staff.Date_Of_Employment_Staff BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") " );
             }
 
             if (Pages.SelectedTab == Delivery)
             {
                 DeliveryPanel.Controls.Clear();
-
-                LoadDelivery("SELECT Orders.ID_Order, " +
-                             "Delivery.ID_Order, " +
-                             "Staff.Surname_Staff, " +
-                             "Staff.Name_Staff, " +
-                             "Delivery.Adress_Delivery, " +
-                             "Delivery.Time_Delivery, " +
-                             "Orders.Date_Order, " +
-                             "Delivery.ID_Delivery" +
-                             " FROM Staff, Delivery, Orders" +
-                             " WHERE Orders.ID_Order = Delivery.ID_Order " +
-                             " AND Delivery.ID_Courier = Staff.ID_Staff " +
-                             " AND Orders.ID_Type_Order = 2" +
-                             "AND " +
-                             "Orders.Date_Order BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#" +
-                             "OR " +
-                             "Orders.Date_Order BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") "
-                             );
+                LoadDelivery(QueryDelivery + "AND " + "Orders.Date_Order BETWEEN " + "#" + DatePicker1.Text + "#" + " AND " + "#" + DatePicker2.Text + "#" + "OR " +
+                                             "Orders.Date_Order BETWEEN " + "#" + DatePicker2.Text + "#" + " AND " + "#" + DatePicker1.Text + "#" + ") " );
             }
+        }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            Report.Clear();
+            RestartDGV();
+
+            if (Pages.SelectedTab == Dish)
+            {
+                Report.AddString("<Center>Отчет по имеющимся блюдам</Center>");
+                Report.AddHorizontalRule();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryDish, connectionString))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    DGDish(dataTable);
+                }
+            }
+
+            if (Pages.SelectedTab == Orders)
+            {
+                Report.AddString("<Center>Отчет по имеющимся заказам</Center>");
+                Report.AddHorizontalRule();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryOrders, connectionString))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    DGOrders(dataTable);
+                }
+            }
+
+            if (Pages.SelectedTab == Clients)
+            {
+                Report.AddString("<Center>Отчет по имеющимся клиентам</Center>");
+                Report.AddHorizontalRule();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryClients, connectionString))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    DGClients(dataTable);
+                }
+            }
+
+            if (Pages.SelectedTab == Staff)
+            {
+                Report.AddString("<Center>Отчет по имеющимся сотрудникам</Center>");
+                Report.AddHorizontalRule();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryStaff, connectionString))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    DGStaff(dataTable);
+                }
+            }
+
+            if (Pages.SelectedTab == Delivery)
+            {
+                Report.AddString("<Center>Отчет по имеющимся доставкам</Center>");
+                Report.AddHorizontalRule();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(QueryDelivery, connectionString))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    DGDelivery(dataTable);
+                }
+            }
+
+            Report.AddDatagridView(DGView);
+            Report.ShowPrintPreviewDialog();
         }
     }
 }

@@ -32,7 +32,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.DishCard = new Bunifu.Framework.UI.BunifuCards();
+            this.DishCardss = new Bunifu.Framework.UI.BunifuCards();
             this.DeleteButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.UpdateButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.RecipeField = new Bunifu.Framework.BunifuCustomTextbox();
@@ -41,31 +41,31 @@
             this.WeightField = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.PriceField = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.pictureDish = new System.Windows.Forms.PictureBox();
-            this.DishCard.SuspendLayout();
+            this.DishCardss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDish)).BeginInit();
             this.SuspendLayout();
             // 
-            // DishCard
+            // DishCardss
             // 
-            this.DishCard.BackColor = System.Drawing.Color.DarkGray;
-            this.DishCard.BorderRadius = 10;
-            this.DishCard.BottomSahddow = false;
-            this.DishCard.color = System.Drawing.Color.Transparent;
-            this.DishCard.Controls.Add(this.DeleteButton);
-            this.DishCard.Controls.Add(this.UpdateButton);
-            this.DishCard.Controls.Add(this.RecipeField);
-            this.DishCard.Controls.Add(this.NameDishField);
-            this.DishCard.Controls.Add(this.AddButton);
-            this.DishCard.Controls.Add(this.WeightField);
-            this.DishCard.Controls.Add(this.PriceField);
-            this.DishCard.Controls.Add(this.pictureDish);
-            this.DishCard.LeftSahddow = false;
-            this.DishCard.Location = new System.Drawing.Point(0, 0);
-            this.DishCard.Name = "DishCard";
-            this.DishCard.RightSahddow = false;
-            this.DishCard.ShadowDepth = 20;
-            this.DishCard.Size = new System.Drawing.Size(355, 436);
-            this.DishCard.TabIndex = 0;
+            this.DishCardss.BackColor = System.Drawing.Color.DarkGray;
+            this.DishCardss.BorderRadius = 10;
+            this.DishCardss.BottomSahddow = false;
+            this.DishCardss.color = System.Drawing.Color.Transparent;
+            this.DishCardss.Controls.Add(this.DeleteButton);
+            this.DishCardss.Controls.Add(this.UpdateButton);
+            this.DishCardss.Controls.Add(this.RecipeField);
+            this.DishCardss.Controls.Add(this.NameDishField);
+            this.DishCardss.Controls.Add(this.AddButton);
+            this.DishCardss.Controls.Add(this.WeightField);
+            this.DishCardss.Controls.Add(this.PriceField);
+            this.DishCardss.Controls.Add(this.pictureDish);
+            this.DishCardss.LeftSahddow = false;
+            this.DishCardss.Location = new System.Drawing.Point(0, 0);
+            this.DishCardss.Name = "DishCardss";
+            this.DishCardss.RightSahddow = false;
+            this.DishCardss.ShadowDepth = 20;
+            this.DishCardss.Size = new System.Drawing.Size(355, 436);
+            this.DishCardss.TabIndex = 0;
             // 
             // DeleteButton
             // 
@@ -426,19 +426,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.DishCard);
+            this.Controls.Add(this.DishCardss);
             this.Name = "Dish";
             this.Size = new System.Drawing.Size(355, 436);
-            this.DishCard.ResumeLayout(false);
-            this.DishCard.PerformLayout();
+            this.DishCardss.ResumeLayout(false);
+            this.DishCardss.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDish)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards DishCard;
         public System.Windows.Forms.PictureBox pictureDish;
         public Bunifu.Framework.UI.BunifuMetroTextbox WeightField;
         public Bunifu.Framework.UI.BunifuMetroTextbox PriceField;
@@ -447,5 +445,6 @@
         public Bunifu.Framework.BunifuCustomTextbox RecipeField;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateButton;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteButton;
+        public Bunifu.Framework.UI.BunifuCards DishCardss;
     }
 }

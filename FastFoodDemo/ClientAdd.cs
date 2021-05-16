@@ -152,8 +152,8 @@ namespace FastFoodDemo
                     SurnameField.Text = dataTable.Rows[0][1].ToString();
                     NameField.Text = dataTable.Rows[0][2].ToString();
                     MiddlenameField.Text = dataTable.Rows[0][3].ToString();
-                    MobPhoneField.Text = dataTable.Rows[0][4].ToString();
-                    AdressField.Text = dataTable.Rows[0][5].ToString();
+                    MobPhoneField.Text = dataTable.Rows[0][5].ToString();
+                    AdressField.Text = dataTable.Rows[0][4].ToString();
                 }
                 HaderLabel.Text = "Редактирование клиента";
                 AddButton.ButtonText = "Исправить";

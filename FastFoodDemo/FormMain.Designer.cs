@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datePickerGraphic = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.DeliveryShowButton = new System.Windows.Forms.Button();
@@ -64,16 +64,19 @@
             this.Delivery = new System.Windows.Forms.TabPage();
             this.DeliveryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.BeginLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.EndLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ChoiceLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Report = new Bunifu.Reports.BunifuReports(this.components);
+            this.DGView = new System.Windows.Forms.DataGridView();
+            this.ReportButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.SearchDateButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.DatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.DatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.AddDeliveryButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.AddClientButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.AddDishButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.AddStaffButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.DatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.DatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.BeginLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.EndLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.ChoiceLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.SearchDateButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
             this.DragPanel.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,6 +87,7 @@
             this.Dish.SuspendLayout();
             this.Orders.SuspendLayout();
             this.Delivery.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -288,26 +292,26 @@
             this.SearchField.Modified = false;
             this.SearchField.Multiline = false;
             this.SearchField.Name = "SearchField";
-            stateProperties33.BorderColor = System.Drawing.Color.Maroon;
-            stateProperties33.FillColor = System.Drawing.Color.Empty;
-            stateProperties33.ForeColor = System.Drawing.Color.Empty;
-            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SearchField.OnActiveState = stateProperties33;
-            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.SearchField.OnDisabledState = stateProperties34;
-            stateProperties35.BorderColor = System.Drawing.Color.IndianRed;
-            stateProperties35.FillColor = System.Drawing.Color.Empty;
-            stateProperties35.ForeColor = System.Drawing.Color.Empty;
-            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SearchField.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            stateProperties36.FillColor = System.Drawing.Color.White;
-            stateProperties36.ForeColor = System.Drawing.Color.Empty;
-            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SearchField.OnIdleState = stateProperties36;
+            stateProperties5.BorderColor = System.Drawing.Color.Maroon;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.SearchField.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.IndianRed;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchField.OnIdleState = stateProperties8;
             this.SearchField.Padding = new System.Windows.Forms.Padding(3);
             this.SearchField.PasswordChar = '\0';
             this.SearchField.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -461,22 +465,22 @@
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(753, 450);
             this.Pages.TabIndex = 8;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Pages.Transition = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Pages.Transition = animation2;
             this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // Clients
@@ -583,6 +587,201 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.DragPanel;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // BeginLabel
+            // 
+            this.BeginLabel.AutoSize = true;
+            this.BeginLabel.BackColor = System.Drawing.Color.Transparent;
+            this.BeginLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BeginLabel.ForeColor = System.Drawing.Color.Black;
+            this.BeginLabel.Location = new System.Drawing.Point(526, 90);
+            this.BeginLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.BeginLabel.MinimumSize = new System.Drawing.Size(20, 20);
+            this.BeginLabel.Name = "BeginLabel";
+            this.BeginLabel.Size = new System.Drawing.Size(70, 20);
+            this.BeginLabel.TabIndex = 105;
+            this.BeginLabel.Text = "Начало";
+            this.BeginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BeginLabel.Visible = false;
+            // 
+            // EndLabel
+            // 
+            this.EndLabel.AutoSize = true;
+            this.EndLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EndLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EndLabel.ForeColor = System.Drawing.Color.Black;
+            this.EndLabel.Location = new System.Drawing.Point(629, 89);
+            this.EndLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.EndLabel.MinimumSize = new System.Drawing.Size(20, 20);
+            this.EndLabel.Name = "EndLabel";
+            this.EndLabel.Size = new System.Drawing.Size(60, 20);
+            this.EndLabel.TabIndex = 106;
+            this.EndLabel.Text = "Конец";
+            this.EndLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EndLabel.Visible = false;
+            // 
+            // ChoiceLabel
+            // 
+            this.ChoiceLabel.AutoSize = true;
+            this.ChoiceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ChoiceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChoiceLabel.ForeColor = System.Drawing.Color.Black;
+            this.ChoiceLabel.Location = new System.Drawing.Point(590, 60);
+            this.ChoiceLabel.MaximumSize = new System.Drawing.Size(285, 35);
+            this.ChoiceLabel.MinimumSize = new System.Drawing.Size(38, 19);
+            this.ChoiceLabel.Name = "ChoiceLabel";
+            this.ChoiceLabel.Size = new System.Drawing.Size(38, 19);
+            this.ChoiceLabel.TabIndex = 104;
+            this.ChoiceLabel.Text = "или";
+            this.ChoiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChoiceLabel.Visible = false;
+            // 
+            // Report
+            // 
+            this.Report.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.Report.AlternativeRowGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.Report.HeaderBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(183)))), ((int)(((byte)(197)))));
+            this.Report.HeaderFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.Report.HeaderGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.Report.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Report.RowDefaultFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.Report.RowDefaultGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            // 
+            // DGView
+            // 
+            this.DGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGView.Location = new System.Drawing.Point(483, 112);
+            this.DGView.Name = "DGView";
+            this.DGView.Size = new System.Drawing.Size(21, 17);
+            this.DGView.TabIndex = 107;
+            this.DGView.Visible = false;
+            // 
+            // ReportButton
+            // 
+            this.ReportButton.ActiveImage = global::FastFoodDemo.Properties.Resources.delivery_96px;
+            this.ReportButton.AllowAnimations = true;
+            this.ReportButton.AllowBuffering = false;
+            this.ReportButton.AllowToggling = false;
+            this.ReportButton.AllowZooming = true;
+            this.ReportButton.AllowZoomingOnFocus = false;
+            this.ReportButton.BackColor = System.Drawing.Color.Transparent;
+            this.ReportButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ReportButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ReportButton.ErrorImage")));
+            this.ReportButton.FadeWhenInactive = false;
+            this.ReportButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ReportButton.Image = global::FastFoodDemo.Properties.Resources.icons8_business_report_96px_1;
+            this.ReportButton.ImageActive = global::FastFoodDemo.Properties.Resources.delivery_96px;
+            this.ReportButton.ImageLocation = null;
+            this.ReportButton.ImageMargin = 5;
+            this.ReportButton.ImageSize = new System.Drawing.Size(35, 35);
+            this.ReportButton.ImageZoomSize = new System.Drawing.Size(40, 40);
+            this.ReportButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("ReportButton.InitialImage")));
+            this.ReportButton.Location = new System.Drawing.Point(464, 55);
+            this.ReportButton.Name = "ReportButton";
+            this.ReportButton.Rotation = 0;
+            this.ReportButton.ShowActiveImage = true;
+            this.ReportButton.ShowCursorChanges = true;
+            this.ReportButton.ShowImageBorders = true;
+            this.ReportButton.ShowSizeMarkers = false;
+            this.ReportButton.Size = new System.Drawing.Size(40, 40);
+            this.ReportButton.TabIndex = 108;
+            this.ReportButton.ToolTipText = "Отчет по отображенным данным";
+            this.ReportButton.WaitOnLoad = false;
+            this.ReportButton.Zoom = 5;
+            this.ReportButton.ZoomSpeed = 10;
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
+            // 
+            // SearchDateButton
+            // 
+            this.SearchDateButton.ActiveImage = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.AllowAnimations = true;
+            this.SearchDateButton.AllowBuffering = false;
+            this.SearchDateButton.AllowToggling = false;
+            this.SearchDateButton.AllowZooming = true;
+            this.SearchDateButton.AllowZoomingOnFocus = false;
+            this.SearchDateButton.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDateButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SearchDateButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.ErrorImage")));
+            this.SearchDateButton.FadeWhenInactive = false;
+            this.SearchDateButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.SearchDateButton.Image = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.ImageActive = global::FastFoodDemo.Properties.Resources.search_96px;
+            this.SearchDateButton.ImageLocation = null;
+            this.SearchDateButton.ImageMargin = 5;
+            this.SearchDateButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SearchDateButton.ImageZoomSize = new System.Drawing.Size(37, 37);
+            this.SearchDateButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.InitialImage")));
+            this.SearchDateButton.Location = new System.Drawing.Point(709, 112);
+            this.SearchDateButton.Name = "SearchDateButton";
+            this.SearchDateButton.Rotation = 0;
+            this.SearchDateButton.ShowActiveImage = true;
+            this.SearchDateButton.ShowCursorChanges = true;
+            this.SearchDateButton.ShowImageBorders = true;
+            this.SearchDateButton.ShowSizeMarkers = false;
+            this.SearchDateButton.Size = new System.Drawing.Size(37, 37);
+            this.SearchDateButton.TabIndex = 102;
+            this.SearchDateButton.ToolTipText = "Добавление нового блюда";
+            this.SearchDateButton.Visible = false;
+            this.SearchDateButton.WaitOnLoad = false;
+            this.SearchDateButton.Zoom = 5;
+            this.SearchDateButton.ZoomSpeed = 10;
+            this.SearchDateButton.Click += new System.EventHandler(this.SearchDateButton_Click);
+            // 
+            // DatePicker2
+            // 
+            this.DatePicker2.BackColor = System.Drawing.Color.White;
+            this.DatePicker2.BorderRadius = 0;
+            this.DatePicker2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker2.Color = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DatePicker2.CustomFormat = "M/d/yyyy";
+            this.DatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
+            this.DatePicker2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker2.DisplayWeekNumbers = false;
+            this.DatePicker2.DPHeight = 0;
+            this.DatePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePicker2.FillDatePicker = false;
+            this.DatePicker2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DatePicker2.ForeColor = System.Drawing.Color.Black;
+            this.DatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePicker2.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker2.Icon")));
+            this.DatePicker2.IconColor = System.Drawing.Color.Transparent;
+            this.DatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
+            this.DatePicker2.LeftTextMargin = 5;
+            this.DatePicker2.Location = new System.Drawing.Point(620, 112);
+            this.DatePicker2.MinimumSize = new System.Drawing.Size(84, 35);
+            this.DatePicker2.Name = "DatePicker2";
+            this.DatePicker2.Size = new System.Drawing.Size(84, 35);
+            this.DatePicker2.TabIndex = 103;
+            this.DatePicker2.Visible = false;
+            // 
+            // DatePicker1
+            // 
+            this.DatePicker1.BackColor = System.Drawing.Color.White;
+            this.DatePicker1.BorderRadius = 0;
+            this.DatePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker1.Color = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DatePicker1.CustomFormat = "M/d/yyyy";
+            this.DatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
+            this.DatePicker1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.DatePicker1.DisplayWeekNumbers = false;
+            this.DatePicker1.DPHeight = 0;
+            this.DatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePicker1.FillDatePicker = false;
+            this.DatePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.DatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker1.Icon")));
+            this.DatePicker1.IconColor = System.Drawing.Color.Transparent;
+            this.DatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
+            this.DatePicker1.LeftTextMargin = 5;
+            this.DatePicker1.Location = new System.Drawing.Point(521, 112);
+            this.DatePicker1.MinimumSize = new System.Drawing.Size(79, 35);
+            this.DatePicker1.Name = "DatePicker1";
+            this.DatePicker1.Size = new System.Drawing.Size(84, 35);
+            this.DatePicker1.TabIndex = 102;
+            this.DatePicker1.Visible = false;
             // 
             // AddDeliveryButton
             // 
@@ -724,152 +923,14 @@
             this.AddStaffButton.ZoomSpeed = 10;
             this.AddStaffButton.Click += new System.EventHandler(this.AddStaffButton_Click);
             // 
-            // DatePicker1
-            // 
-            this.DatePicker1.BackColor = System.Drawing.Color.White;
-            this.DatePicker1.BorderRadius = 0;
-            this.DatePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.DatePicker1.Color = System.Drawing.SystemColors.InactiveCaptionText;
-            this.DatePicker1.CustomFormat = "M/d/yyyy";
-            this.DatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
-            this.DatePicker1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.DatePicker1.DisplayWeekNumbers = false;
-            this.DatePicker1.DPHeight = 0;
-            this.DatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DatePicker1.FillDatePicker = false;
-            this.DatePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DatePicker1.ForeColor = System.Drawing.Color.Black;
-            this.DatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker1.Icon")));
-            this.DatePicker1.IconColor = System.Drawing.Color.Transparent;
-            this.DatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
-            this.DatePicker1.LeftTextMargin = 5;
-            this.DatePicker1.Location = new System.Drawing.Point(521, 112);
-            this.DatePicker1.MinimumSize = new System.Drawing.Size(79, 35);
-            this.DatePicker1.Name = "DatePicker1";
-            this.DatePicker1.Size = new System.Drawing.Size(84, 35);
-            this.DatePicker1.TabIndex = 102;
-            this.DatePicker1.Visible = false;
-            // 
-            // DatePicker2
-            // 
-            this.DatePicker2.BackColor = System.Drawing.Color.White;
-            this.DatePicker2.BorderRadius = 0;
-            this.DatePicker2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.DatePicker2.Color = System.Drawing.SystemColors.InactiveCaptionText;
-            this.DatePicker2.CustomFormat = "M/d/yyyy";
-            this.DatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DatePicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center;
-            this.DatePicker2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.DatePicker2.DisplayWeekNumbers = false;
-            this.DatePicker2.DPHeight = 0;
-            this.DatePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DatePicker2.FillDatePicker = false;
-            this.DatePicker2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DatePicker2.ForeColor = System.Drawing.Color.Black;
-            this.DatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DatePicker2.Icon = ((System.Drawing.Image)(resources.GetObject("DatePicker2.Icon")));
-            this.DatePicker2.IconColor = System.Drawing.Color.Transparent;
-            this.DatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None;
-            this.DatePicker2.LeftTextMargin = 5;
-            this.DatePicker2.Location = new System.Drawing.Point(620, 112);
-            this.DatePicker2.MinimumSize = new System.Drawing.Size(84, 35);
-            this.DatePicker2.Name = "DatePicker2";
-            this.DatePicker2.Size = new System.Drawing.Size(84, 35);
-            this.DatePicker2.TabIndex = 103;
-            this.DatePicker2.Visible = false;
-            // 
-            // BeginLabel
-            // 
-            this.BeginLabel.AutoSize = true;
-            this.BeginLabel.BackColor = System.Drawing.Color.Transparent;
-            this.BeginLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BeginLabel.ForeColor = System.Drawing.Color.Black;
-            this.BeginLabel.Location = new System.Drawing.Point(526, 90);
-            this.BeginLabel.MaximumSize = new System.Drawing.Size(285, 35);
-            this.BeginLabel.MinimumSize = new System.Drawing.Size(20, 20);
-            this.BeginLabel.Name = "BeginLabel";
-            this.BeginLabel.Size = new System.Drawing.Size(70, 20);
-            this.BeginLabel.TabIndex = 105;
-            this.BeginLabel.Text = "Начало";
-            this.BeginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BeginLabel.Visible = false;
-            // 
-            // EndLabel
-            // 
-            this.EndLabel.AutoSize = true;
-            this.EndLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EndLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EndLabel.ForeColor = System.Drawing.Color.Black;
-            this.EndLabel.Location = new System.Drawing.Point(629, 89);
-            this.EndLabel.MaximumSize = new System.Drawing.Size(285, 35);
-            this.EndLabel.MinimumSize = new System.Drawing.Size(20, 20);
-            this.EndLabel.Name = "EndLabel";
-            this.EndLabel.Size = new System.Drawing.Size(60, 20);
-            this.EndLabel.TabIndex = 106;
-            this.EndLabel.Text = "Конец";
-            this.EndLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EndLabel.Visible = false;
-            // 
-            // ChoiceLabel
-            // 
-            this.ChoiceLabel.AutoSize = true;
-            this.ChoiceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ChoiceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChoiceLabel.ForeColor = System.Drawing.Color.Black;
-            this.ChoiceLabel.Location = new System.Drawing.Point(590, 60);
-            this.ChoiceLabel.MaximumSize = new System.Drawing.Size(285, 35);
-            this.ChoiceLabel.MinimumSize = new System.Drawing.Size(38, 19);
-            this.ChoiceLabel.Name = "ChoiceLabel";
-            this.ChoiceLabel.Size = new System.Drawing.Size(38, 19);
-            this.ChoiceLabel.TabIndex = 104;
-            this.ChoiceLabel.Text = "или";
-            this.ChoiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ChoiceLabel.Visible = false;
-            // 
-            // SearchDateButton
-            // 
-            this.SearchDateButton.ActiveImage = global::FastFoodDemo.Properties.Resources.search_96px;
-            this.SearchDateButton.AllowAnimations = true;
-            this.SearchDateButton.AllowBuffering = false;
-            this.SearchDateButton.AllowToggling = false;
-            this.SearchDateButton.AllowZooming = true;
-            this.SearchDateButton.AllowZoomingOnFocus = false;
-            this.SearchDateButton.BackColor = System.Drawing.Color.Transparent;
-            this.SearchDateButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.SearchDateButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.ErrorImage")));
-            this.SearchDateButton.FadeWhenInactive = false;
-            this.SearchDateButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.SearchDateButton.Image = global::FastFoodDemo.Properties.Resources.search_96px;
-            this.SearchDateButton.ImageActive = global::FastFoodDemo.Properties.Resources.search_96px;
-            this.SearchDateButton.ImageLocation = null;
-            this.SearchDateButton.ImageMargin = 5;
-            this.SearchDateButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SearchDateButton.ImageZoomSize = new System.Drawing.Size(37, 37);
-            this.SearchDateButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("SearchDateButton.InitialImage")));
-            this.SearchDateButton.Location = new System.Drawing.Point(709, 112);
-            this.SearchDateButton.Name = "SearchDateButton";
-            this.SearchDateButton.Rotation = 0;
-            this.SearchDateButton.ShowActiveImage = true;
-            this.SearchDateButton.ShowCursorChanges = true;
-            this.SearchDateButton.ShowImageBorders = true;
-            this.SearchDateButton.ShowSizeMarkers = false;
-            this.SearchDateButton.Size = new System.Drawing.Size(37, 37);
-            this.SearchDateButton.TabIndex = 102;
-            this.SearchDateButton.ToolTipText = "Добавление нового блюда";
-            this.SearchDateButton.Visible = false;
-            this.SearchDateButton.WaitOnLoad = false;
-            this.SearchDateButton.Zoom = 5;
-            this.SearchDateButton.ZoomSpeed = 10;
-            this.SearchDateButton.Click += new System.EventHandler(this.SearchDateButton_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(957, 599);
+            this.Controls.Add(this.ReportButton);
+            this.Controls.Add(this.DGView);
             this.Controls.Add(this.SearchDateButton);
             this.Controls.Add(this.EndLabel);
             this.Controls.Add(this.BeginLabel);
@@ -900,6 +961,7 @@
             this.Dish.ResumeLayout(false);
             this.Orders.ResumeLayout(false);
             this.Delivery.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -946,6 +1008,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel EndLabel;
         private Bunifu.Framework.UI.BunifuCustomLabel ChoiceLabel;
         private Bunifu.UI.WinForms.BunifuImageButton SearchDateButton;
+        private Bunifu.Reports.BunifuReports Report;
+        private Bunifu.UI.WinForms.BunifuImageButton ReportButton;
+        public System.Windows.Forms.DataGridView DGView;
     }
 }
 
